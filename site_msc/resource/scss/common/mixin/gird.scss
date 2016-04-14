@@ -1,0 +1,41 @@
+@mixin make-container($width:$screen-sm-k,$gutter: $grid-gutter-width) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: ($gutter / 2);
+  padding-right: ($gutter / 2);
+  //width: $width -  $grid-gutter-width;
+  width:$width;
+  @include clearfix();
+}
+
+@mixin make-container-with-border($width:$screen-sm-k,$gutter: $grid-gutter-width,$boder-width:$grid-border-width,$border-style:$grid-border-style,$border-color:$grid-border-color) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: ($gutter / 2);
+  padding-right: ($gutter / 2);
+  //width: $width -  $grid-gutter-width - $boder-width * 2;
+  width:$width;
+
+  border: $boder-width $border-style $border-color;
+  @include clearfix();
+}
+
+@mixin row-1-99(){
+  @for $i from 1 through 99{
+    .row-#{$i} {width:$i * 1% !important;}
+  }
+}
+@mixin padding-left-1-99(){
+  @for $i from 1 through 99{
+    .padding-left-#{$i} {padding-left:$i * 1% !important;}
+  }
+}
+@mixin grid(){
+  @for $i from 1 through 99{
+    .col-#{$i} {
+      @extend %fLeft;
+      width:$i * 1% !important;
+    }
+  }
+}
+

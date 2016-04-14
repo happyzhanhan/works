@@ -1,0 +1,270 @@
+@charset "utf-8";
+/**
+ * Created by wwp9 on 2016-4-9.
+ */
+.wrap_store{
+  .store_content{
+    table{
+      width:100%;
+      line-height: 30px;
+      thead{
+        border-bottom: 1px dotted $gray-light-c;
+        th{
+          padding:10px 10px 10px 0;
+          text-align: right;
+          color: $gray;
+          font-size: $font-size-base;
+          font-weight: 900;
+          vertical-align: top;
+        }
+        td{
+          padding:10px 0;
+          text-align: left;
+          font-size: $font-size-small;
+          vertical-align: top;
+          p{
+            &.yellow_bg{
+              background: lighten($yellowBase,55%);
+              width:363px;
+              line-height:2;
+              border:1px solid lighten($redSub,30%);
+              @extend %fLeft;
+              padding:0 10px;
+              i{
+                color: $orangeSub;
+                padding-right:10px;
+              }
+            }
+          }
+          span.mustfill{
+            @extend %fRight;
+            padding-right:10px;
+            em{
+              color: $orange;
+            }
+          }
+        }
+      }
+      tbody{
+        th{
+          padding:10px 0;
+          text-align: right;
+          font-size: $font-size-base;
+          color: $gray;
+          vertical-align: top;
+          em{
+            color: $orange;
+          }
+        }
+        td{
+          padding:10px 0;
+          text-align: left;
+          font-size: $font-size-small;
+          color: $gray;
+          vertical-align: top;
+          .message-control{
+            padding-left:10px;
+            em{
+              color: $orange;
+              font-weight: 900;
+            }
+          }
+          textarea.tworow{
+            border:1px solid $gray-light-c;
+            height:72px;
+            line-height:1.5;
+            width:600px;
+            padding:0 5px;
+            color: $gray;
+          }
+          .spec{
+            border:1px solid $gray-light-c;
+            background-color: lighten($gray,60%);
+            padding:10px;
+            width:848px;
+            @extend %clearFix;
+            .main_title{
+              b{
+                color:$gray;
+                @extend %fLeft;
+              }
+              img{
+                @extend %fLeft;
+                vertical-align: bottom;
+                margin-top:5px;
+              }
+              p{
+                background: lighten($yellowBase,55%);
+                width:522px;
+                line-height:2;
+                border:1px solid lighten($redSub,30%);
+                @extend %fLeft;
+                padding:0 10px;
+                margin-left:10px;
+                i{
+                  color: $orangeSub;
+                  padding-right:10px;
+                }
+              }
+
+            }
+            table.color_cate{
+              th{
+                text-align: right;
+              }
+              td{
+                padding: 5px 10px;
+              }
+              input{
+                @extend %inline-block;
+                line-height: 22px;
+                height: 24px;
+              }
+              button.subimg{
+                color: $gray;
+                line-height:24px;
+                height:24px;
+                border: 1px solid $gray-light-c;
+                width:120px;
+                background: $gray-lighter;
+              }
+            }
+            .dimension{
+              background-color: $bgc;
+              padding:5px 20px 20px 20px;
+              margin-top:10px;
+              color: $gray;
+              lable{
+                text-align: left;
+                @extend %inline-block;
+                width:45px;
+              }
+              table{
+                td{
+                  text-align: left;
+                  padding:0 0 5px 0;
+                  span{
+                    @extend %inline-block;
+                    border:1px solid $gray-light-c;
+                    height:24px;
+                    line-height:24px;
+                    color:$gray-light-c;
+                    padding:0 10px;
+                    margin-left:5px;
+                  }
+                }
+              }
+            }
+            .customer_dim{
+              padding:5px 20px 20px 20px;
+              border-bottom:1px solid $gray-light-c;
+              margin-bottom:5px;
+              input[type=text]{
+                border:1px solid $gray-light-c;
+                width:108px;
+                padding:0 5px;
+                height:24px;
+                line-height:24px;
+                margin:0 5px;
+                color: $gray;
+              }
+              p{
+                color:$blueBase;
+                line-height:24px;
+                a{
+                  color:$blueBase;
+                  &:hover{
+                    color: $gray;
+                  }
+                }
+              }
+            }
+            .batchfill{
+              padding: 0 0 30px 30px;
+              p{
+                color: $gray;
+                input[type=text]{
+                  height:24px;
+                  line-height:24px;
+                  border:1px solid $gray-light-c;
+                  margin:0 5px;
+                  width:138px;
+                  color: $gray;
+                  padding:0 5px;
+                }
+                button{
+                  color: $gray;
+                  line-height:24px;
+                  height:24px;
+                  border: 1px solid $gray-light-c;
+                  width:100px;
+                  background: $gray-lighter;
+                  margin-left:10px;
+                }
+              }
+              .batchta{
+                padding-left: 28px;
+                width:753px;
+                margin-top:5px;
+                table{
+                  thead{
+                    border-bottom: 0;
+                    td{
+                      color: $gray-darker;
+                      font-weight:900;
+                      text-align: center;
+                      border:1px solid $gray-light-c;
+                      padding:0;
+                    }
+                  }
+                  tbody{
+                    background-color: $bgc;
+                    th{
+                      line-height:85px;
+                      text-align: center;
+                      border:1px solid $gray-light-c;
+                      padding:0;
+                    }
+                    td{
+                      text-align: center;
+                      padding:0;
+                      border:1px solid $gray-light-c;
+                    }
+                  }
+                }
+              }
+
+            }
+          }
+          .price_profit{
+            width: 795px;
+            table{
+              th{
+                border: 1px solid $gray-light-c;
+                background-color: lighten($gray,60%);
+                padding:0;
+                text-align: center;
+                font-weight:normal;
+              }
+              td{
+                border: 1px solid $gray-light-c;
+                text-align: center;
+              }
+            }
+          }
+          .merchant_code{
+            font-size: $font-size-base;
+            font-weight:900;
+            input{
+              width:220px;
+              border:1px solid $gray-light-c;
+              height:24px;
+              line-height:24px;
+              margin-right:20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

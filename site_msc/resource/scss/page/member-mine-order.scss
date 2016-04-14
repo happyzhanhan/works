@@ -1,0 +1,324 @@
+@charset "utf-8";
+/**
+ * Created by wwp9 on 2016-04-06.
+ */
+.member-right {
+  %table-w {
+    width: 100%;
+  }
+  .mine-order {
+    padding: 0 20px 50px;
+    table {
+      @extend %table-w;
+      %form {
+        height: 28px;
+        border: 1px solid $gray-light-c;
+      }
+      &.tages {
+        line-height: 60px;
+        border-bottom: 1px dotted $gray-d;
+        .tage {
+          color: $gray-lighter;
+          cite {
+            @extend %fRight;
+            padding-right: 10px;
+            color: $gray-light;
+          }
+          span {
+            font-size: $font-size-base;
+            margin: 0 10px;
+            color: $gray-light;
+            @extend %cursor-pointer;
+            &.activate {
+              font-weight: 700;
+              color: $orange-light;
+              border-bottom: 1px solid $orange-light;
+            }
+          }
+        }
+        .input {
+          input {
+            @extend %fLeft;
+            @extend %form;
+            width: 215px;
+            border-right: 0;
+            padding: 0 10px;
+            color: $gray-light;
+          }
+          button {
+            @extend %fLeft;
+            @extend %form;
+            width: 65px;
+            background: $gray-lighter;
+          }
+        }
+        .senior-filter {
+          text-align: center;
+          font-size: $font-size-base;
+          i {
+            font-size: 90%;
+          }
+        }
+      }
+      &.filter {
+        line-height: 80px;
+
+        select {
+          width: 130px;
+          @extend %form;
+          color: $gray-light;
+        }
+        input {
+          width: 150px;
+          padding: 0 10px;
+          margin: 0 10px;
+          @extend %form;
+          color: $gray-light;
+        }
+      }
+      &.thead {
+        line-height: 40px;
+        th {
+          background: $bodyBGC;
+          font-weight: 400;
+          font-size: 13px;
+        }
+        td {
+          span {
+            padding: 0 5px;
+            @extend %cursor-pointer;
+          }
+        }
+        .state {
+          position: relative;
+          .opt-for {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            i {
+              visibility: hidden;
+              @extend %inline-block;
+              position: absolute;
+              right: 10px;
+            }
+            ul {
+              display: none;
+              li {
+                position: relative;
+                @extend %cursor-pointer;
+                i {
+                  visibility: hidden;
+                  left: 10px;
+                  right: auto;
+                }
+                &:hover {
+                  background: $bodyBGC;
+                }
+
+              }
+            }
+          }
+          &:hover {
+            .opt-for {
+              background: $body-bg;
+              @include box-shadow($gray-lighte);
+              line-height: 28px;
+              padding: 6px 0;
+              font-size: 13px;
+              i {
+                visibility: visible;
+              }
+              ul {
+                display: block;
+                li {
+                  i{
+                    visibility: hidden;
+                  }
+                  &.current {
+                    i {
+                      visibility: visible;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        input {
+          margin-bottom: 2px;
+          margin-left: 10px;
+
+        }
+      }
+      &.section {
+        border: 1px solid $gray-d;
+        margin-bottom: 10px;
+        %thead-bg {
+          background: $bodyBGC;
+        }
+        thead {
+          line-height: 30px;
+          th {
+            @extend %thead-bg;
+            font-weight:400;
+            padding-left: 10px;
+            text-align: left;
+            padding-top: 8px;
+            color: $gray-lighte;
+            em{
+              padding-left: 10px;
+            }
+          }
+          td {
+            @extend %thead-bg;
+            border-bottom: 1px solid $gray-d;
+            padding-left: 10px;
+            padding-bottom: 8px;
+            a{
+              @extend %inline-block;
+              background: $body-bg;
+              border: 1px solid $gray-d;
+              line-height: 1;
+              padding: 5px 10px;
+            }
+          }
+        }
+        tbody {
+          th {
+            line-height: 40px;
+            font-weight: 400;
+            padding:0 10px;
+            em{
+              padding-left: 15px;
+            }
+            span{
+              padding-left: 30px;
+            }
+            input{
+              margin-right: -10px;
+              margin-bottom: 2px;
+            }
+            i{
+              color: $orange-light;
+              padding:0 5px;
+              &.btn-right{
+                @extend %fRight;
+                @extend %cursor-pointer;
+                color: $gray-light;
+              }
+            }
+          }
+          td{
+            padding: 10px 0;
+            table{
+              td{
+                vertical-align: top;
+                padding: 10px;
+                line-height: 1.5;
+                border-top: 1px solid $gray-d;
+                p{
+                  height: 3em;
+                  overflow: hidden;
+                }
+                em{
+                  display: block;
+                  margin-top: 5px;
+                }
+                i{
+                  font-size:$font-size-base;
+                  color: $orange-light;
+                  @extend %cursor-pointer;
+                }
+              }
+              tr{
+                &:first-child{
+                  td{
+                    border: 0;
+                    padding-top: 0;
+                  }
+                }
+                &:last-child{
+                  td{
+                    padding-bottom: 0;
+                  }
+                }
+              }
+              th{
+                line-height: 2;
+                vertical-align: top;
+                border-left: 1px solid $gray-d;
+                .evaluate{
+                  @extend %inline-block;
+                  background: $bodyBGC;
+                  border: 1px solid $gray-d;
+                  padding:0 15px;
+                  line-height: 1.5;
+
+                }
+              }
+              img{
+                display: block;
+                width: 80px;
+                height: 80px;
+                border: 1px solid $gray-d;
+              }
+            }
+          }
+          .head {
+            th {
+              @extend %thead-bg;
+              padding-left: 10px;
+              border-top: 1px solid $gray-d;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+  .foot-page{
+    .page{
+      font-size:$font-size-base;
+      @extend %fRight;
+      %page-s {
+        height: 26px;
+        line-height: 24px;
+        border: 1px solid $gray-d;
+        padding:0 8px;
+        margin:0 5px;
+        font-size:$font-size-base;
+      }
+      cite{
+        @extend %inline-block;
+        @extend %page-s;
+      }
+      span{
+        padding:0 2px;
+        &.activate{
+          color: $orange-light;
+        }
+      }
+      input{
+        @extend %page-s;
+        width: 40px;
+      }
+      button{
+        @extend %page-s;
+        background: $orange-light;
+        color: $btn-primary-color;
+        border: 0;
+        @include border-radius(3px);
+      }
+    }
+    .check-section{
+      input{
+        margin-bottom: 2px;
+      }
+      span{
+        padding-left: 10px;
+      }
+    }
+  }
+}

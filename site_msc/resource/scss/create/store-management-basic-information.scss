@@ -1,0 +1,32 @@
+@charset "utf-8";
+/**
+ * Created by wwp9 on 2016-03-30.
+ */
+
+//buyer commit apply for 33m.com
+
+//variables
+@import "../common/variables";
+//placeholder
+@import "../common/placeholder";
+
+//mixin
+@import "../common/mixin/clearFix";
+@import "../common/mixin/media";
+@import "../common/mixin/structure-color";
+@import "../common/mixin/border-radius";
+@import "../common/mixin/box";
+@import "../common/mixin/form-compose";
+@import "../common/mixin/gird";
+@import "../common/mixin/compose";
+@import "../common/mixin/data-table";
+@import "../common/mixin/table";
+
+
+
+
+//layout
+
+@import "../page/store-management-main";
+@import "../page/store-management-basic-information";
+

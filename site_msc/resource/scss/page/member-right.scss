@@ -1,0 +1,89 @@
+@charset "utf-8";
+.member-right{
+  font-family:$font-family-base;
+  min-height:1050px;
+  @extend %fRight;
+  width:884px;
+  background: $body-bg;
+  color: $gray-light;
+  .infoTages {
+    @include clearfix;
+    padding: $gird-padding;
+    %bd-b-2-orange {
+      border-bottom: 2px solid $orangeBase;
+    }
+    font-size: $font-size-base;
+    a {
+      @extend %fLeft;
+      margin-right: 2em;
+      color: $gray-light;
+      &:hover {
+        text-decoration: none;
+        @extend %bd-b-2-orange;
+      }
+      &.defbor {
+        font-weight: 700;
+        color: $orangeBase;
+        @extend %bd-b-2-orange;
+      }
+    }
+  }
+  .rightBar {
+    @extend %fRight;
+    width: 280px;
+    margin-right: 20px;
+    .prompt {
+      padding: 10px 20px;
+      border: 1px solid $gray-light-c;
+      background: $bodyBGC;
+      h4 {
+        font-weight: 400;
+        font-size: 120%;
+      }
+      ul{
+        padding:10px 0;
+        line-height: 2;
+        cite{
+          @extend %inline-block;
+          width: 40%;
+        }
+      }
+    }
+    .ps {
+      padding: 0 20px;
+      line-height: 3;
+    }
+    h4{
+      font-size:$font-size-base;
+    }
+  }
+  h1{
+    padding:0 $padding-large-horizontal;
+    font-weight: 400;
+    font-size:$font-size-h4;
+    line-height: 38px;
+    border-bottom: 1px solid $gray-lighter;
+    color: $text-color-gray;
+  }
+  h2{
+    font-size:$font-size-base;
+    line-height: 38px;
+    padding:0 $padding-large-horizontal;
+    color: $gray;
+    small{
+      font-weight: 400;
+      color: $text-color-gray;
+    }
+  }
+  fieldset{
+    label{}
+
+  }
+  .info-right{
+    .prompt{
+      h4{}
+      p{}
+    }
+    .annotation{}
+  }
+}

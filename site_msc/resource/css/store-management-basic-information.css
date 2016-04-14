@@ -1,0 +1,433 @@
+@charset "UTF-8";
+/**
+ * Created by wwp9 on 2016-03-30.
+ */
+/*
+box model;
+*/
+.wrap_store .store_main .store_content {
+  margin: 0 auto; }
+
+.wrap_store .store_top .storename, .wrap_store .store_top .store_top_center p, .wrap_store .store_top .store_own p, .wrap_store .store_left, .wrap_store .store_main .store_content table.top_common thead td p.yellow_bg, .wrap_store .store_main .store_content table.top_common thead td p.no_bg, .wrap_store .store_content table thead td p.yellow_bg, .wrap_store .store_content table tbody td .spec .main_title b, .wrap_store .store_content table tbody td .spec .main_title img, .wrap_store .store_content table tbody td .spec .main_title p {
+  float: left; }
+
+.wrap_store .store_top .store_own, .wrap_store .store_main .store_content table.top_common thead td span.mustfill, .wrap_store .store_content table thead td span.mustfill {
+  float: right; }
+
+.wrap_store .store_top, .wrap_store .store_top .store_top_center, .wrap_store .store_content table tbody td .spec {
+  *zoom: 1; }
+  .wrap_store .store_top:after, .wrap_store .store_top .store_top_center:after, .wrap_store .store_content table tbody td .spec:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both; }
+
+.wrap_store .store_top .storename p, .wrap_store .store_top .store_own p, .wrap_store .store_top .store_own a, .wrap_store .store_main .store_content table.top_common thead td p.yellow_bg, .wrap_store .store_content table tbody td .spec table.color_cate input, .wrap_store .store_content table tbody td .spec .dimension lable, .wrap_store .store_content table tbody td .spec .dimension table td span {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/*
+清浮动
+*/
+/**
+ * Created by wwp9 on 2016-04-10.
+ */
+/*
+结构颜色
+*/
+/*
+圆角类
+*/
+/*
+盒子类
+*/
+/*
+排版
+
+create by kant in 2016-3-18 04:11
+*/
+/*
+create by kant on 2016-03-18 20:17
+
+数据表格
+*/
+/**
+ * Created by wwp9 on 2016-03-31.
+ */
+/**
+ * Created by wwp9 on 2016-4-9.
+ */
+body, html {
+  height: 100%; }
+
+.wrap_store {
+  position: relative;
+  height: 100%;
+  min-width: 1200px;
+  z-index: 100; }
+  .wrap_store:before, .wrap_store:after {
+    content: " ";
+    display: table; }
+  .wrap_store:after {
+    clear: both; }
+  .wrap_store .store_top_cos {
+    width: 100%;
+    background-color: #fefff2;
+    height: 30px;
+    position: relative; }
+  .wrap_store .store_top {
+    position: fixed;
+    width: 100%;
+    background-color: #00152b;
+    font-size: 14px;
+    color: #fff;
+    z-index: 109; }
+    .wrap_store .store_top .storename {
+      margin-left: 20px;
+      padding: 10px 0;
+      width: 280px; }
+      .wrap_store .store_top .storename em {
+        color: #3cb00a;
+        font-size: 17px; }
+      .wrap_store .store_top .storename p {
+        height: 24px;
+        line-height: 24px;
+        padding: 0 10px;
+        margin-left: 5%;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid #757393;
+        color: #757393; }
+    .wrap_store .store_top .store_top_center {
+      padding-top: 10px;
+      margin: 0 auto;
+      text-align: right;
+      width: 1000px; }
+      @media screen and (max-width: 1640px) {
+        .wrap_store .store_top .store_top_center {
+          width: auto; } }
+      .wrap_store .store_top .store_top_center button {
+        margin-left: 15px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        padding: 0 10px;
+        background-color: #757393;
+        border: 0;
+        line-height: 24px;
+        color: #fff;
+        font-size: 14px; }
+    .wrap_store .store_top .store_own {
+      width: 350px;
+      padding: 10px 0; }
+      .wrap_store .store_top .store_own p {
+        color: #757393;
+        width: 86px;
+        text-align: right; }
+      .wrap_store .store_top .store_own a {
+        color: #757393;
+        width: 100px;
+        text-align: center; }
+  .wrap_store .store_left {
+    width: 130px;
+    min-height: 100%;
+    position: fixed;
+    z-index: 105;
+    text-align: right;
+    background-color: #777777;
+    padding-top: 44px;
+    margin-bottom: -44px; }
+    .wrap_store .store_left ul li {
+      font-size: 14px; }
+      .wrap_store .store_left ul li span {
+        color: #555555;
+        line-height: 4;
+        display: block;
+        background: #f4f4f4;
+        padding-right: 37px; }
+        .wrap_store .store_left ul li span i {
+          padding-right: 5px; }
+      .wrap_store .store_left ul li a {
+        color: #eeeeee;
+        padding-right: 37px;
+        line-height: 4;
+        display: block;
+        padding-right: 37px; }
+        .wrap_store .store_left ul li a i {
+          padding-right: 5px; }
+    .wrap_store .store_left p {
+      font-size: 14px;
+      color: #fff;
+      padding-right: 37px;
+      line-height: 4;
+      background-color: #555555; }
+  .wrap_store .store_main {
+    min-height: 100%;
+    margin-left: 130px;
+    padding: 44px 0 78px 0;
+    position: relative; }
+    .wrap_store .store_main .store_content {
+      width: 1000px;
+      min-height: 100%;
+      position: relative;
+      background: #fff; }
+      .wrap_store .store_main .store_content:before, .wrap_store .store_main .store_content:after {
+        content: " ";
+        display: table; }
+      .wrap_store .store_main .store_content:after {
+        clear: both; }
+      .wrap_store .store_main .store_content table.top_common {
+        width: 100%;
+        line-height: 30px; }
+        .wrap_store .store_main .store_content table.top_common thead {
+          border-bottom: 1px dotted #cccccc; }
+          .wrap_store .store_main .store_content table.top_common thead th {
+            padding: 10px 10px 10px 0;
+            text-align: right;
+            color: #555555;
+            font-size: 14px;
+            font-weight: 900;
+            vertical-align: top; }
+          .wrap_store .store_main .store_content table.top_common thead td {
+            padding: 10px 0;
+            text-align: left;
+            font-size: 12px;
+            vertical-align: top; }
+            .wrap_store .store_main .store_content table.top_common thead td p.yellow_bg {
+              background: #fffffc;
+              line-height: 2;
+              border: 1px solid #ffcece;
+              padding: 0 10px; }
+              .wrap_store .store_main .store_content table.top_common thead td p.yellow_bg i {
+                color: #ed6d1e;
+                padding-right: 10px; }
+              .wrap_store .store_main .store_content table.top_common thead td p.yellow_bg em {
+                color: #f30; }
+            .wrap_store .store_main .store_content table.top_common thead td p.no_bg {
+              color: #777777;
+              padding-right: 10px; }
+              .wrap_store .store_main .store_content table.top_common thead td p.no_bg em {
+                color: #f30; }
+            .wrap_store .store_main .store_content table.top_common thead td span.mustfill {
+              padding-right: 10px; }
+              .wrap_store .store_main .store_content table.top_common thead td span.mustfill em {
+                color: #f30; }
+  .wrap_store .store_footer {
+    position: fixed;
+    background: #eeeeee;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 101; }
+    .wrap_store .store_footer button {
+      border: 1px solid #cccccc;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      width: 90px;
+      height: 30px;
+      margin: 25px 17px;
+      font-size: 14px; }
+      .wrap_store .store_footer button.graycolor {
+        background-color: #777777;
+        color: #fff; }
+      .wrap_store .store_footer button.whitecolor {
+        background-color: #fff; }
+
+/**
+ * Created by wwp9 on 2016-4-9.
+ */
+.wrap_store .store_content table {
+  width: 100%;
+  line-height: 30px; }
+  .wrap_store .store_content table thead {
+    border-bottom: 1px dotted #cccccc; }
+    .wrap_store .store_content table thead th {
+      padding: 10px 10px 10px 0;
+      text-align: right;
+      color: #555555;
+      font-size: 14px;
+      font-weight: 900;
+      vertical-align: top; }
+    .wrap_store .store_content table thead td {
+      padding: 10px 0;
+      text-align: left;
+      font-size: 12px;
+      vertical-align: top; }
+      .wrap_store .store_content table thead td p.yellow_bg {
+        background: #fffffc;
+        width: 363px;
+        line-height: 2;
+        border: 1px solid #ffcece;
+        padding: 0 10px; }
+        .wrap_store .store_content table thead td p.yellow_bg i {
+          color: #ed6d1e;
+          padding-right: 10px; }
+      .wrap_store .store_content table thead td span.mustfill {
+        padding-right: 10px; }
+        .wrap_store .store_content table thead td span.mustfill em {
+          color: #f30; }
+  .wrap_store .store_content table tbody th {
+    padding: 10px 0;
+    text-align: right;
+    font-size: 14px;
+    color: #555555;
+    vertical-align: top; }
+    .wrap_store .store_content table tbody th em {
+      color: #f30; }
+  .wrap_store .store_content table tbody td {
+    padding: 10px 0;
+    text-align: left;
+    font-size: 12px;
+    color: #555555;
+    vertical-align: top; }
+    .wrap_store .store_content table tbody td .message-control {
+      padding-left: 10px; }
+      .wrap_store .store_content table tbody td .message-control em {
+        color: #f30;
+        font-weight: 900; }
+    .wrap_store .store_content table tbody td textarea.tworow {
+      border: 1px solid #cccccc;
+      height: 72px;
+      line-height: 1.5;
+      width: 600px;
+      padding: 0 5px;
+      color: #555555; }
+    .wrap_store .store_content table tbody td .spec {
+      border: 1px solid #cccccc;
+      background-color: #eeeeee;
+      padding: 10px;
+      width: 848px; }
+      .wrap_store .store_content table tbody td .spec .main_title b {
+        color: #555555; }
+      .wrap_store .store_content table tbody td .spec .main_title img {
+        vertical-align: bottom;
+        margin-top: 5px; }
+      .wrap_store .store_content table tbody td .spec .main_title p {
+        background: #fffffc;
+        width: 522px;
+        line-height: 2;
+        border: 1px solid #ffcece;
+        padding: 0 10px;
+        margin-left: 10px; }
+        .wrap_store .store_content table tbody td .spec .main_title p i {
+          color: #ed6d1e;
+          padding-right: 10px; }
+      .wrap_store .store_content table tbody td .spec table.color_cate th {
+        text-align: right; }
+      .wrap_store .store_content table tbody td .spec table.color_cate td {
+        padding: 5px 10px; }
+      .wrap_store .store_content table tbody td .spec table.color_cate input {
+        line-height: 22px;
+        height: 24px; }
+      .wrap_store .store_content table tbody td .spec table.color_cate button.subimg {
+        color: #555555;
+        line-height: 24px;
+        height: 24px;
+        border: 1px solid #cccccc;
+        width: 120px;
+        background: #eeeeee; }
+      .wrap_store .store_content table tbody td .spec .dimension {
+        background-color: #fff;
+        padding: 5px 20px 20px 20px;
+        margin-top: 10px;
+        color: #555555; }
+        .wrap_store .store_content table tbody td .spec .dimension lable {
+          text-align: left;
+          width: 45px; }
+        .wrap_store .store_content table tbody td .spec .dimension table td {
+          text-align: left;
+          padding: 0 0 5px 0; }
+          .wrap_store .store_content table tbody td .spec .dimension table td span {
+            border: 1px solid #cccccc;
+            height: 24px;
+            line-height: 24px;
+            color: #cccccc;
+            padding: 0 10px;
+            margin-left: 5px; }
+      .wrap_store .store_content table tbody td .spec .customer_dim {
+        padding: 5px 20px 20px 20px;
+        border-bottom: 1px solid #cccccc;
+        margin-bottom: 5px; }
+        .wrap_store .store_content table tbody td .spec .customer_dim input[type=text] {
+          border: 1px solid #cccccc;
+          width: 108px;
+          padding: 0 5px;
+          height: 24px;
+          line-height: 24px;
+          margin: 0 5px;
+          color: #555555; }
+        .wrap_store .store_content table tbody td .spec .customer_dim p {
+          color: #0061c4;
+          line-height: 24px; }
+          .wrap_store .store_content table tbody td .spec .customer_dim p a {
+            color: #0061c4; }
+            .wrap_store .store_content table tbody td .spec .customer_dim p a:hover {
+              color: #555555; }
+      .wrap_store .store_content table tbody td .spec .batchfill {
+        padding: 0 0 30px 30px; }
+        .wrap_store .store_content table tbody td .spec .batchfill p {
+          color: #555555; }
+          .wrap_store .store_content table tbody td .spec .batchfill p input[type=text] {
+            height: 24px;
+            line-height: 24px;
+            border: 1px solid #cccccc;
+            margin: 0 5px;
+            width: 138px;
+            color: #555555;
+            padding: 0 5px; }
+          .wrap_store .store_content table tbody td .spec .batchfill p button {
+            color: #555555;
+            line-height: 24px;
+            height: 24px;
+            border: 1px solid #cccccc;
+            width: 100px;
+            background: #eeeeee;
+            margin-left: 10px; }
+        .wrap_store .store_content table tbody td .spec .batchfill .batchta {
+          padding-left: 28px;
+          width: 753px;
+          margin-top: 5px; }
+          .wrap_store .store_content table tbody td .spec .batchfill .batchta table thead {
+            border-bottom: 0; }
+            .wrap_store .store_content table tbody td .spec .batchfill .batchta table thead td {
+              color: #222222;
+              font-weight: 900;
+              text-align: center;
+              border: 1px solid #cccccc;
+              padding: 0; }
+          .wrap_store .store_content table tbody td .spec .batchfill .batchta table tbody {
+            background-color: #fff; }
+            .wrap_store .store_content table tbody td .spec .batchfill .batchta table tbody th {
+              line-height: 85px;
+              text-align: center;
+              border: 1px solid #cccccc;
+              padding: 0; }
+            .wrap_store .store_content table tbody td .spec .batchfill .batchta table tbody td {
+              text-align: center;
+              padding: 0;
+              border: 1px solid #cccccc; }
+    .wrap_store .store_content table tbody td .price_profit {
+      width: 795px; }
+      .wrap_store .store_content table tbody td .price_profit table th {
+        border: 1px solid #cccccc;
+        background-color: #eeeeee;
+        padding: 0;
+        text-align: center;
+        font-weight: normal; }
+      .wrap_store .store_content table tbody td .price_profit table td {
+        border: 1px solid #cccccc;
+        text-align: center; }
+    .wrap_store .store_content table tbody td .merchant_code {
+      font-size: 14px;
+      font-weight: 900; }
+      .wrap_store .store_content table tbody td .merchant_code input {
+        width: 220px;
+        border: 1px solid #cccccc;
+        height: 24px;
+        line-height: 24px;
+        margin-right: 20px; }
+
+/*# sourceMappingURL=store-management-basic-information.css.map */

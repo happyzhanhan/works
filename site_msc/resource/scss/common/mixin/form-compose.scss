@@ -1,0 +1,301 @@
+@mixin inputSection($i-float:1,$label-width:25%,$input-width:70%,$line-height:35px,$message-height:30px,$CAPTCHA-width:24%) {
+  font: 400 $font-size-base $font-family-base;
+  label {
+    @extend %inline-block;
+    line-height: $line-height;
+    width: $label-width;
+    text-align: right;
+    height: $line-height;
+    color: $gray-light;
+    vertical-align: middle;
+  }
+  %input-text{
+    position: relative;
+    @extend %inline-block;
+    height: $line-height;
+    border: 1px solid $gray-lighte;
+    vertical-align: middle;
+    overflow: hidden;
+    input {
+      display: block;
+      width: 100%;
+      height: $line-height - 2px;
+      @if $i-float > 0 {
+        padding: 0 0.5em 0 2em;
+      }@else {
+        padding: 0 2em 0 0.5em;
+      }
+      border: none;
+      outline: none;
+      color: $gray-light;
+      font: 400 $font-size-base $font-family-base;
+      line-height: $line-height - 2;
+    }
+  }
+  .input-text{
+    @extend %input-text;
+    width: $input-width;
+    i {
+      position: absolute;
+      right: 5px;
+      top: 4px;
+      font-size: $font-size-large;
+      color: $gray-lighte;
+    }
+  }
+  .input-CAPTCHA{
+    @extend %input-text;
+    width:$CAPTCHA-width;
+    input{padding:0 0.5em;}
+  }
+  .input-contxt{
+    position: relative;
+    @extend %inline-block;
+    width: 240px;
+    height: 33px;
+    vertical-align: middle;
+    overflow: hidden;
+    input {
+      font-size: 16px;
+      line-height: 34px;
+      font-weight:bold;
+      color: #727272;
+      border: none;
+    }
+  }
+  .message {
+    height: $message-height;
+    line-height: $message-height;
+    padding-left: $label-width;
+    font-size: $font-size-small;
+    color: $gray-lighte;
+  }
+  &.error {
+    .input-text {
+      border-color: $redBase;
+    }
+    .message {
+      color: $redBase;
+    }
+  }
+  &.succeed {
+    .input-text {
+      border-color: $greenBase;
+      i {
+        color: $greenBase;
+      }
+    }
+    .message {
+      color: $greenBase;
+    }
+  }
+  &.activate {
+    .input-text {
+      border-color: $orangeSub;
+    }
+    .message {
+      color: $orangeSub;
+    }
+  }
+  .cut {
+    @extend %inline-block;
+    padding-left: 10px;
+    font-size: $font-size-small;
+    cursor: pointer;
+    color: $gray-light;
+    vertical-align: middle;
+    strong, em {
+      padding-left: 5px;
+      color: $orangeBase;
+    }
+  }
+  .CAPTCHAImg {
+    vertical-align: middle;
+  }
+  button {
+    width: $CAPTCHA-width;
+    height: 33px;
+    margin-left: 5px;
+    background: url(/resource/images/btn-gray-shade.jpg) 0 bottom repeat-x;
+    border: 1px solid $gray-lighte;
+    font: 400 $font-size-small $font-family-base;
+    color: $gray-light;
+  }
+}
+
+@mixin inputSection-2() {
+
+  .input-text {
+    position: relative;
+    height: 36px;
+    border: 1px solid $gray-light-c;
+    i {
+      position: absolute;
+      left: 10px;
+      top: 2px;
+      font-size: 20px;
+      color:$gray-light;
+    }
+    input {
+      width: 100%;
+      border: 0;
+      height: 34px;
+      line-height: 36px;
+      outline: none;
+      padding: 0 10px 0 40px;
+      color: $gray-light;
+    }
+  }
+  .message {
+    height: 30px;
+    line-height: 30px;
+    font-size: $font-size-small;
+    color:$gray-lighte;
+  }
+  .activate {
+    .input-text {
+      border-color: $orange-lighter;
+      @include box-shadow($orange-lighter);
+    }
+    .message{
+      color: $gray-lighte;
+    }
+  }
+  .succeed {
+    .input-text {
+      border-color: $greenBase;
+      @include box-shadow($greenBase);
+    }
+    .message{
+      color: $greenBase;
+    }
+  }
+  .error {
+    .input-text {
+      border-color: $redSub;
+      @include box-shadow($redSub);
+    }
+    .message{
+      color: $redSub;
+    }
+  }
+}
+@mixin member-form-sections($input-height:30px){
+  fieldset{
+    li{
+      padding: $padding-base-vertical 0;
+    }
+    %input-c-b{
+      color: $text-color-gray;
+      border: 1px solid $gray-light-c;
+      padding:0 $padding-base-horizontal;
+    }
+    label{
+      @extend %inline-block;
+      text-align: right;
+      color: $gray;
+    }
+
+    input{
+      @extend %input-c-b;
+      height:$input-height - 2;
+      line-height:$input-height - 2;
+      margin-left:4px;
+      &.checkbox{
+        border: 0;
+        margin-right:$margin-small-horizontal;
+      }
+    }
+    select{
+      border: 1px solid #ccc;
+      background: none;
+      padding:4px;
+      height: 30px;
+      line-height: 30px;
+      color: $gray-light;
+    }
+    textarea{
+      @extend %input-c-b;
+      padding:10px;
+    }
+    button{
+      height: 35px;
+      padding: 0 $padding-large-horizontal;
+      border: 1px solid $gray-light-c;
+      font-size:$font-size-base;
+      color: $gray-dark;
+      background: url("/resource/images/btn-gray-shade.jpg") 0 bottom repeat-x;
+    }
+  }
+}
+@mixin universalFormSection($line-height:30px,$font-size:$font-size-base,$label-color:$gray-light,$input-color: $gray-light,$input-bg:$input-bg,$input-bd-color:$gray-light-c,$border-radius:0,$message-height:30px){
+  .control-label{
+    font-size:$font-size;
+    padding:($line-height - $font-size)/2 $gird-padding;
+    line-height:1;
+    text-align: right;
+  }
+  .form-control{
+    display: block;
+    width: 100%;
+    height: $line-height;
+    padding:0 $gird-padding;
+    font-size:$font-size;
+    line-height: $line-height;
+    color: $input-color;
+    background-color: $input-bg;
+    background-image: none;
+    border: 1px solid $input-bd-color;
+    outline: none;
+    @include border-radius($border-radius);
+    @include box-shadow($color:$gray-lighter inset,$x:1,$y:1,$blur:2px,$spread:0);
+    &.i-left{
+      padding-left:2em;
+    }
+    &.i-right{
+      padding-right:2em;
+    }
+  }
+  textarea.form-control{
+    height:auto;
+    padding:10px;
+  }
+  select.form-control{
+    padding:0 5px;
+    text-align: center;
+  }
+  .incon-control{
+    position: absolute;
+  }
+  .message-control{
+    clear: both;
+    height:$message-height;
+    line-height:$message-height;
+  }
+  .disabled{
+    background: $gray-lighter;
+    border-color: $gray-lighter;
+  }
+  .form-group{
+    &.succeed{}
+    &.fouse{}
+    &.warning{}
+    &.error{}
+  }
+}
+@mixin form-state-color($color){
+  %color{
+    color: $color;
+  }
+  .incon-control{
+    @extend %color;
+  }
+  .message-control{
+    @extend %color;
+  }
+  .form-control{
+    border-color: $color;
+    @include box-shadow($color);
+    @include box-shadow(lighten($color,40%) inset);
+  }
+}

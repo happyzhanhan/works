@@ -1,0 +1,202 @@
+*{
+  @extend %box-sizing;
+}
+html {
+  @extend %fz100;
+}
+
+blockquote, dd, dl, dt, form, hr, li, ol, p, pre, td, th, ul, fieldset {
+  @extend %m0p0;
+}
+
+body {
+  @extend %m0p0;
+  @extend %fDefault;
+  background-color: $bodyBGC;
+  text-align: left;
+  color: $text-color-base;
+  font-family:$font-family-base;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %m0p0;
+  @extend %fz100;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+h4 {
+  font-size: $font-size-h4;
+}
+
+h5 {
+  font-size: $font-size-h5;
+}
+
+h6 {
+  font-size: $font-size-h6;
+}
+
+fieldset {
+  border: 0;
+}
+
+button {
+  @extend %m0p0;
+  @extend %fDefault;
+  @extend %fz100;
+  @extend %vAMiddle;
+  *overflow: visible;
+  line-height: normal;
+  font-family: $font-family-base;
+  &::-moz-focus-inner {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  -webkit-appearance: button; // Corrects inability to style clickable `input` types in iOS.
+  cursor: pointer;
+}
+
+div {
+  @extend %pngHtc;
+}
+
+input {
+  @extend %m0p0;
+  @extend %fDefault;
+  @extend %fz100;
+  @extend %vAMiddle;
+  @extend %pngHtc;
+  *overflow: visible;
+  line-height: normal;
+  &::-moz-focus-inner {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  @at-root html input[type="button"], // Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls.
+  &[type="reset"],
+  &[type="submit"] {
+    -webkit-appearance: button; // Corrects inability to style clickable `input` types in iOS.
+    cursor: pointer;
+  }
+  &[type="search"] { // Appearance in Safari/Chrome
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-appearance: textfield;
+    &::-webkit-search-decoration, &::-webkit-search-cancel-button {
+      -webkit-appearance: none; // Inner-padding issues in Chrome OSX, Safari 5
+    }
+  }
+}
+
+textarea {
+  @extend %m0p0;
+  @extend %fDefault;
+  @extend %fz100;
+  @extend %vAMiddle;
+  overflow: auto; // Remove vertical scrollbar in IE6-9
+  vertical-align: top; // Readability and alignment cross-browser
+}
+
+select {
+  @extend %fDefault;
+  @extend %fz100;
+  @extend %vAMiddle;
+}
+
+address, cite, dfn, em, var, caption, i {
+  @extend %fsNormal;
+}
+
+code, kbd, pre, samp {
+  font-family: courier new, courier, monospace;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  @extend %m0p0;
+  @extend %bd0;
+  @extend %pngHtc;
+  @extend %vaTop;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  text-align: center;
+}
+
+legend {
+  color: $gray-base;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+li {
+  @extend %vaTop;
+}
+
+small {
+  @extend %fzDefault;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+i {
+  @extend %iconfont;
+}
+
+.wrap {
+  width: $screen-sm-k;
+  @extend %mLmRAuto;
+  @include clearfix;
+}
+
+.w-lg {
+  width: $screen-lg-k;
+  @extend %mLmRAuto;
+}

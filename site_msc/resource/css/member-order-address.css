@@ -1,0 +1,199 @@
+@charset "UTF-8";
+/*
+box model;
+*/
+.member-right .infoTages a {
+  float: left; }
+
+.member-right, .member-right .rightBar, .member-right .map {
+  float: right; }
+
+.member-right .address td .operate cite {
+  cursor: pointer; }
+
+.member-right .address, .member-right .btn-address-admin {
+  width: 94%;
+  margin: 10px 3%; }
+
+.member-right .rightBar .prompt ul cite, .member-right fieldset label {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/*
+清浮动
+*/
+/*
+create by kant on 2016-03-18 20:17
+
+数据表格
+*/
+.member-right {
+  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-height: 1050px;
+  width: 884px;
+  background: #fff;
+  color: #777777; }
+  .member-right .infoTages {
+    padding: 15px;
+    font-size: 14px; }
+    .member-right .infoTages:before, .member-right .infoTages:after {
+      content: " ";
+      display: table; }
+    .member-right .infoTages:after {
+      clear: both; }
+    .member-right .infoTages a:hover, .member-right .infoTages a.defbor {
+      border-bottom: 2px solid #ff6100; }
+    .member-right .infoTages a {
+      margin-right: 2em;
+      color: #777777; }
+      .member-right .infoTages a:hover {
+        text-decoration: none; }
+      .member-right .infoTages a.defbor {
+        font-weight: 700;
+        color: #ff6100; }
+  .member-right .rightBar {
+    width: 280px;
+    margin-right: 20px; }
+    .member-right .rightBar .prompt {
+      padding: 10px 20px;
+      border: 1px solid #cccccc;
+      background: #f4f4f4; }
+      .member-right .rightBar .prompt h4 {
+        font-weight: 400;
+        font-size: 120%; }
+      .member-right .rightBar .prompt ul {
+        padding: 10px 0;
+        line-height: 2; }
+        .member-right .rightBar .prompt ul cite {
+          width: 40%; }
+    .member-right .rightBar .ps {
+      padding: 0 20px;
+      line-height: 3; }
+    .member-right .rightBar h4 {
+      font-size: 14px; }
+  .member-right h1 {
+    padding: 0 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 38px;
+    border-bottom: 1px solid #eeeeee;
+    color: #777777; }
+  .member-right h2 {
+    font-size: 14px;
+    line-height: 38px;
+    padding: 0 15px;
+    color: #555555; }
+    .member-right h2 small {
+      font-weight: 400;
+      color: #777777; }
+
+/*
+会员管理收货地址
+
+create by kant on 2016-03-18 07:20
+*/
+.member-right .add-address {
+  margin-bottom: 50px; }
+  .member-right .add-address:before, .member-right .add-address:after {
+    content: " ";
+    display: table; }
+  .member-right .add-address:after {
+    clear: both; }
+.member-right:before, .member-right:after {
+  content: " ";
+  display: table; }
+.member-right:after {
+  clear: both; }
+.member-right .map {
+  display: inline;
+  width: 350px;
+  height: 260px;
+  border: 1px solid #eeeeee;
+  margin-right: 15px;
+  margin-top: 10px; }
+.member-right fieldset li {
+  padding: 10px 0; }
+.member-right fieldset input, .member-right fieldset textarea {
+  color: #777777;
+  border: 1px solid #cccccc;
+  padding: 0 10px; }
+.member-right fieldset label {
+  text-align: right;
+  color: #555555; }
+.member-right fieldset input {
+  height: 28px;
+  line-height: 28px;
+  margin-left: 4px; }
+  .member-right fieldset input.checkbox {
+    border: 0;
+    margin-right: 5px; }
+.member-right fieldset select {
+  border: 1px solid #ccc;
+  background: none;
+  padding: 4px;
+  height: 30px;
+  line-height: 30px;
+  color: #777777; }
+.member-right fieldset textarea {
+  padding: 10px; }
+.member-right fieldset button {
+  height: 35px;
+  padding: 0 15px;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+  color: #333333;
+  background: url("/resource/images/btn-gray-shade.jpg") 0 bottom repeat-x; }
+.member-right fieldset {
+  width: 455px; }
+  .member-right fieldset label {
+    width: 165px; }
+  .member-right fieldset input {
+    width: 260px; }
+    .member-right fieldset input.checkbox {
+      width: auto;
+      height: auto; }
+    .member-right fieldset input.mobile, .member-right fieldset input.telphone {
+      width: 200px; }
+  .member-right fieldset select {
+    width: 91px; }
+  .member-right fieldset textarea {
+    width: 260px; }
+.member-right .address {
+  border: 1px solid #cccccc; }
+  .member-right .address th, .member-right .address td {
+    padding: 10px; }
+  .member-right .address th {
+    background: #eeeeee;
+    text-align: left;
+    text-indent: 10px;
+    font-size: 14px; }
+  .member-right .address td {
+    font-size: 13px; }
+    .member-right .address td .operate {
+      position: relative; }
+      .member-right .address td .operate a {
+        color: #0061c4;
+        margin-right: 15px; }
+      .member-right .address td .operate span, .member-right .address td .operate cite {
+        padding: 0 10px; }
+      .member-right .address td .operate span {
+        display: none;
+        background-color: #FEAA47;
+        color: #fff; }
+  .member-right .address.activate {
+    border-color: #FEAA47; }
+    .member-right .address.activate .operate cite {
+      display: none; }
+    .member-right .address.activate .operate span {
+      display: inline; }
+.member-right .btn-address-admin button {
+  height: 24px;
+  padding: 0 20px;
+  border: 1px solid #eeeeee;
+  background: #f8f8f8 url("/resource/images/btn-gray-shade.jpg") 0 15px repeat-x;
+  color: #777777; }
+  .member-right .btn-address-admin button.fold {
+    display: none; }
+
+/*# sourceMappingURL=member-order-address.css.map */

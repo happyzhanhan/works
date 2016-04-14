@@ -1,0 +1,17 @@
+@charset "utf-8";
+/*
+盒子类
+*/
+@mixin box-shadow($color:$redBase,$x:0,$y:0,$blur:2px,$spread:0){
+  -webkit-box-shadow: $x $y $blur $spread $color ;
+  -moz-box-shadow: $x $y $blur $spread $color ;
+  box-shadow: $x $y $blur $spread $color ;
+  font: 400 $font-size-base $font-family-base;
+}
+
+@mixin gary-box($line-height:50px,$bg-color:$bodyBGC,$bd-color:$gray-d){
+  width: 100%;
+  background: $bg-color;
+  border: 1px solid $bd-color;
+  line-height: $line-height;
+}

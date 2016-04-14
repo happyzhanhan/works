@@ -1,0 +1,7 @@
+.succeed-page-header {
+  @include blue-page-header();
+}
+.page-header-write{
+  @include write-page-header;
+  @include clearfix;
+}

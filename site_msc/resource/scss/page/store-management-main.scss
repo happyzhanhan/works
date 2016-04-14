@@ -1,0 +1,231 @@
+@charset "utf-8";
+/**
+ * Created by wwp9 on 2016-4-9.
+ */
+body,html{
+  height: 100%;
+}
+.wrap_store{
+  position: relative;
+  @include clearfix;
+  height: 100%;
+  min-width:1200px;
+  z-index:100;
+  .store_top_cos{
+    width:100%;
+    background-color: lighten($yellowBase,53%);
+    height:30px;
+    position: relative;
+  }
+  .store_top{
+    position: fixed;
+    width:100%;
+    background-color: darken($blueBase,30%);
+    font-size: $font-size-base;
+    color: $bgc;
+    z-index:109;
+    @extend %clearFix;
+    .storename{
+      @extend %fLeft;
+      margin-left:20px;
+      padding:10px 0;
+      width: 280px;
+      em{
+        color: $greenBase;
+        font-size: $font-size-large2;
+      }
+      span{
+
+      }
+      p{
+        @extend %inline-block;
+        height:24px;
+        line-height:24px;
+        padding:0 10px;
+        margin-left:5%;
+        @include border-radius(5px);
+        border:1px solid #757393;
+        color: #757393;
+        i{
+        }
+      }
+    }
+    .store_top_center{
+      padding-top: 10px;
+      margin:0 auto;
+      text-align: right;
+      width:1000px;
+      @include max-screen(1640px){
+        width:auto;
+      };
+      @extend %clearFix;
+      p{
+        @extend %fLeft;
+      }
+      button{
+        margin-left:15px;
+        @include border-radius(3px);
+        padding:0 10px;
+        background-color:#757393;
+        border:0;
+        line-height:24px;
+        color: $bgc;
+        font-size: $font-size-base;
+      }
+    }
+    .store_own{
+      @extend %fRight;
+      width:350px;
+      padding:10px 0;
+      p{
+        color: #757393;
+        @extend %fLeft;
+        width:86px;
+        @extend %inline-block;
+        text-align: right;
+      }
+      a{
+        color: #757393;
+        @extend %inline-block;
+        width:100px;
+        text-align: center;
+
+      }
+    }
+
+  }
+  .store_left{
+    @extend %fLeft;
+    width:130px;
+    min-height:100%;
+    position: fixed;
+    z-index:105;
+    text-align: right;
+    background-color: $gray-light;
+    padding-top: 44px;
+    margin-bottom: -44px;
+    ul{
+      li{
+        font-size: $font-size-base;
+        span{
+          color: $gray;
+          line-height:4;
+          display: block;
+          background: #f4f4f4;
+          padding-right:37px;
+          i{
+            padding-right:5px;
+          }
+        }
+        a{
+          color:$gray-lighter;
+          padding-right:37px;
+          line-height:4;
+          display: block;
+          padding-right:37px;
+          i{
+            padding-right:5px;
+          }
+
+        }
+      }
+    }
+    p{
+      font-size: $font-size-base;
+      color: $bgc;
+      padding-right:37px;
+      line-height:4;
+      background-color: $gray
+    }
+  }
+  .store_main{
+    min-height: 100%;
+    margin-left: 130px;
+    padding: 44px 0 78px 0;
+    position: relative;
+    .store_content{
+      @include clearfix;
+      width:1000px;
+      min-height: 100%;
+      position: relative;
+      @extend %m-0-auto;
+      background: $body-bg;
+      table.top_common{
+        width:100%;
+        line-height: 30px;
+        thead{
+          border-bottom: 1px dotted $gray-light-c;
+          th{
+            padding:10px 10px 10px 0;
+            text-align: right;
+            color: $gray;
+            font-size: $font-size-base;
+            font-weight: 900;
+            vertical-align: top;
+          }
+          td{
+            padding:10px 0;
+            text-align: left;
+            font-size: $font-size-small;
+            vertical-align: top;
+            p{
+              &.yellow_bg{
+                background: lighten($yellowBase,55%);
+                @extend %inline-block;
+                line-height:2;
+                border:1px solid lighten($redSub,30%);
+                @extend %fLeft;
+                padding:0 10px;
+                i{
+                  color: $orangeSub;
+                  padding-right:10px;
+                }
+                em{
+                  color: $orange;
+                }
+              }
+              &.no_bg{
+                color: $gray-light;
+                @extend %fLeft;
+                em{
+                  color: $orange;
+                }
+                padding-right:10px;
+              }
+            }
+            span.mustfill{
+              @extend %fRight;
+              padding-right:10px;
+              em{
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .store_footer{
+    position: fixed;
+    background: $gray-lighter;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index:101;
+    button{
+      border: 1px solid $gray-light-c;
+      @include border-radius(3px);
+      width:90px;
+      height:30px;
+      margin:25px 17px;
+      font-size: $font-size-base;
+      &.graycolor{
+        background-color: $gray-light;
+        color: $bgc;
+      }
+      &.whitecolor{
+        background-color: $bgc;
+    }
+    }
+  }
+}

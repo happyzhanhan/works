@@ -1,0 +1,30 @@
+
+//mixin
+@import "../common/mixin/form-compose";
+
+
+
+//variables
+@import "../common/variables";
+//placeholder
+@import "../common/placeholder";
+
+//mixin
+@import "../common/mixin/clearFix";
+@import "../common/mixin/structure-color";
+@import "../common/mixin/border-radius";
+@import "../common/mixin/box";
+@import "../common/mixin/form-compose";
+@import "../common/mixin/gird";
+@import "../common/mixin/compose";
+
+
+
+
+//gird
+@import "../page/gird";
+
+//layout
+
+@import "../page/common";
+

@@ -1,0 +1,33 @@
+@charset "utf-8";
+/**
+ * Created by wwp9 on 2016-03-31.
+ */
+
+@mixin table-1($bg-color:$body-bg,$thead-color:$bodyBGC,$border:1px) {
+  width: 100%;
+  background: $bg-color;
+  @if $border != 'none' {
+    border: $border solid $gray-d;
+  }
+  thead {
+    line-height: 3;
+    th {
+      background:$thead-color ;
+      font-size: $font-size-base;
+      @if $border != 'none' {
+        border: $border solid $gray-d;
+      }
+    }
+  }
+  tbody {
+    th {
+      font-weight: 400;
+    }
+    td {
+      vertical-align: top;
+      @if $border != 'none' {
+        border: $border solid $gray-d;
+      }
+    }
+  }
+}

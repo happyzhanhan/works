@@ -1,0 +1,20 @@
+//member-header for 33m.com
+
+//variables
+@import "../common/variables";
+
+//placeholder
+@import "../common/placeholder";
+
+
+//mixin
+@import "../common/mixin/clearFix";
+@import "../common/mixin/structure-color";
+@import "../common/mixin/border-radius";
+@import "../common/mixin/box";
+@import "../common/mixin/compose";
+
+
+//page
+@import "../page/headerTopContent";
+@import "../page/member-header";

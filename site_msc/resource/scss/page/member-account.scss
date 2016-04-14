@@ -1,0 +1,83 @@
+@charset "utf-8";
+/**
+ * Created by wwp9 on 2016-03-27.
+ */
+.member-right {
+  %grade{
+    width: 100px;
+    height: 10px;
+    background: $gray-lighter;
+    span {
+      display: block;
+      height: 10px;
+      background: $greenBase;
+    }
+  }
+  .account-grade {
+    @include redBgTitle(30px);
+    margin: $gird-padding;
+    padding: 0 $gird-padding;
+    strong {
+      @extend %fLeft;
+
+    }
+    .grade {
+      @extend %fLeft;
+      margin-top: 10px;
+      @extend %grade;
+    }
+    em {
+      @extend %fLeft;
+      padding: 0 20px;
+      color: $greenBase;
+    }
+    p {
+      font-size: $font-size-small;
+    }
+  }
+  .account-list {
+    padding:$gird-padding;
+    li{
+      background: $bodyBGC;
+      border: 1px solid $gray-light-x;
+      margin-bottom: 10px;
+      padding:10px ;
+      line-height: 40px;
+      font-size: $font-size-base;
+      a{
+        @extend %fRight;
+        padding-right: 10px;
+        color: $blueBase;
+      }
+      i{
+        @extend %inline-block;
+        width: 40px;
+        text-align: center;
+        &.state{
+          font-size: 20px;
+        }
+        &.error{
+          color: $redBase;
+        }
+        &.warning{
+          color:$orange-light-a;
+        }
+      }
+      strong{
+        @extend %inline-block;
+        font-size:16px;
+      }
+      p{
+        @extend %inline-block;
+        .grade{
+          @extend %inline-block;
+          @extend %grade;
+        }
+        em {
+          padding: 0 20px;
+          color: $greenBase;
+        }
+      }
+    }
+  }
+}

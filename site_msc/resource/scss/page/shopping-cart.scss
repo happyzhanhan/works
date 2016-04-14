@@ -1,0 +1,835 @@
+@charset "utf-8";
+/**
+ * Created by wwp9 on 2016-03-28.
+ */
+.page-header {
+  @include write-page-header(90px);
+  .step {
+    @extend %fRight;
+    width: 450px;
+    height: 53px;
+    margin-top: 20px;
+    &.step-1 {
+      background: url("/resource/images/shopping_cart_header_1.jpg") right 0 no-repeat;
+    }
+  }
+}
+
+.shopping-cart {
+  background: $body-bg;
+  h1 {
+    font-size: $font-size-h3;
+    color: $orange-light;
+    line-height: 40px;
+    small {
+      font-weight: 400;
+      color: $gray-light;
+      input {
+        margin-bottom: 2px;
+        margin-right: 5px;
+      }
+      cite {
+        padding-left: 10px;
+      }
+    }
+  }
+  .thead_cart {
+    margin-bottom: 10px;
+    th {
+      text-align: left;
+      font-weight: 400;
+    }
+  }
+  .tbody_cart {
+    margin-bottom: 10px;
+    border: 1px solid $gray-d;
+    line-height: 2;
+    thead {
+      line-height: 2.5;
+      th {
+        text-align: left;
+        font-size: 100%;
+        font-weight: 400;
+      }
+    }
+    tbody {
+      td {
+        padding: 10px;
+        table {
+          width: 100%;
+          border: 1px solid lighten($greenBase, 35%);
+          color: $gray-8;
+          background: lighten($greenBase, 62%);
+          td {
+            padding: 10px 0;
+            text-align: center;
+            img {
+              display: block;
+              width: 80px;
+              height: 80px;
+            }
+            del {
+              color: $gray-lighte;
+              font-size: $font-size-base;
+              line-height: 1.5;
+            }
+            cite {
+              display: block;
+              color: $gray;
+              font-size: $font-size-base;
+              line-height: 1.5;
+            }
+            .favorable {
+              @extend %inline-block;
+              margin-top: 5px;
+              position: relative;
+              width: 80px;
+              height: 22px;
+              line-height: 22px;
+              span {
+                display: block;
+                background: adjust-hue(lighten($redBase, 22%), -5%);
+                width: 100%;
+                height: 22px;
+                color: $text-color-sub;
+              }
+              i {
+                position: absolute;
+                display: none;
+                left: 0;
+                top: 23px;
+                width: 100%;
+                height: 5px;
+                background: url("/resource/images/arrows-up-orange-1.png") center 0 no-repeat;
+              }
+              div {
+                position: absolute;
+                display: none;
+                top: 27px;
+                width: 150px;
+                left: -35px;
+                line-height: 1.5;
+                padding: 3px 8px;
+                background: $body-bg;
+                border: 1px solid $orange-lighter;
+                z-index:99;
+                @include border-radius(2px);
+              }
+              &:hover {
+                i {
+                  display: block;
+                }
+                div {
+                  display: block;
+                  color: $gray-light;
+                }
+              }
+            }
+            .num {
+              width: 80px;
+              height: 26px;
+              @extend %m-0-auto;
+              border: 1px solid $gray-b;
+              i {
+                width: 20px;
+                height: 24px;
+                text-align: center;
+                cursor: pointer;
+                &.plus {
+                  @extend %fRight;
+                }
+                &.minus {
+                  @extend %fLeft;
+                }
+              }
+              input {
+                @extend %fLeft;
+                border: 0;
+                width: 38px;
+                height: 24px;
+                line-height: 24px;
+                border-left: 1px solid $gray-b;
+                border-right: 1px solid $gray-b;
+                text-align: center;
+                outline: none;
+              }
+            }
+            strong {
+              font-size: 120%;;
+              color: $gray;
+            }
+          }
+          th {
+            padding: 10px 0;
+            vertical-align: top;
+            text-align: left;
+            a {
+              display: block;
+            }
+            p {
+              line-height: 1.5;
+              a {
+              }
+              margin-bottom: 10px;
+            }
+            em {
+              @extend %inline-block;
+              height: 24px;
+              line-height: 20px;
+              padding: 0 5px 4px;
+              background: url('/resource/images/msg-orange-1.png') 0 0 no-repeat;
+              color: $text-color-sub;
+            }
+          }
+        }
+      }
+    }
+  }
+  .close-an-account {
+    position: relative;
+    width: 100%;
+    border: 1px solid $gray-d;
+    td {
+      padding: 15px 0 5px;
+      vertical-align: top;
+      color: $gray-light;
+      &.checkbox {
+        padding-left: 10px;
+        input {
+          vertical-align: middle;
+          margin-right: 5px;
+          margin-bottom: 2px;
+        }
+        em {
+          margin-left: 10px;
+        }
+      }
+      &.resolution {
+        padding-right: 5px;
+        cite {
+          display: block;
+          background: desaturate(lighten($greenBase, 15%), 40%);
+          text-align: center;
+          color: $text-color-sub;
+          @extend %cursor-pointer;
+        }
+        .resolution-content {
+          position: absolute;
+          width: 1100px;
+          left: 0;
+          bottom: 60px;
+          background: $body-bg;
+          border: 1px solid desaturate(lighten($greenBase, 15%), 40%);
+          display: none;
+          span.icon {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 10px;
+            left: 0;
+            bottom: -11px;
+            background: url("/resource/images/arrows-down-green-1.png") 480px top no-repeat;
+          }
+
+          .content {
+            @extend %fLeft;
+            width: 1068px;
+            overflow: hidden;
+          }
+          i {
+            display: block;
+            width: 15px;
+            height: 100%;
+            @extend %cursor-pointer;
+            top: 0;
+            line-height: 100px;
+            text-align: center;
+            &.left {
+              @extend %fLeft
+            }
+            &.right {
+              @extend %fRight
+            }
+
+          }
+          dl {
+            width: 1000000px;
+            dt {
+              padding: 10px 0;
+              @extend %fLeft;
+              a.good-section {
+                margin-right: 10px;
+                width: 80px;
+                height: 80px;
+                @extend %fLeft;
+                position: relative;
+                img {
+                  display: block;
+                  width: 80px;
+                  height: 80px;
+                }
+                p {
+                  position: absolute;
+                  width: 100%;
+                  left: 0;
+                  bottom: 0;
+                  height: 20px;
+                  line-height: 20px;
+                  background: #000;
+                  opacity: 0.5;
+                  color: $text-color-sub;
+                  text-align: center;
+                }
+              }
+            }
+            dd {
+              @extend %fLeft;
+              margin-top: 10px;
+              width: 80px;
+              text-align: center;
+              line-height: 1.8;
+              margin-right: 10px;
+              padding-right: 10px;
+              border-right: 1px solid $gray-lighte;
+              em {
+                color: lighten($redBase, 20%);
+                font-weight: 700;
+              }
+              strong {
+                display: block;
+                color: lighten($redBase, 20%);
+                font-size: 140%;
+              }
+              button {
+                width: 100%;
+                height: 30px;
+                background: adjust-hue(lighten($redBase, 27%), -6%) url('/resource/images/btn-red-1.jpg') 0 bottom repeat-x;
+                border: 0;
+                font-size: $font-size-base;
+                color: $text-color-sub;
+              }
+
+            }
+          }
+        }
+
+      }
+      &.opt-for {
+        em {
+          color: lighten($redBase, 20%);
+          font-weight: 700;
+          font-size: $font-size-base;
+          padding: 0 3px;
+        }
+      }
+      &.price {
+        text-align: center;
+
+        p {
+          strong {
+            font-size: 140%;
+            color: lighten($redBase, 20%);
+
+          }
+        }
+      }
+      &.affirm {
+        padding: 1px;
+        button {
+          width: 100%;
+          border: 0;
+          height: 100%;
+          color: $text-color-sub;
+          background: adjust-hue(lighten($redBase, 27%), -6%) url('/resource/images/btn-red-1.jpg') 0 bottom repeat-x;
+          font-size: 170%;
+        }
+      }
+    }
+  }
+}
+
+.goodListA {
+  @include goodListA(1);
+}
+
+.shopping-cart-confirm-order {
+  background: $body-bg;
+  margin: 30px 0;
+  padding: 0 30px;
+  @include clearfix;
+  h1 {
+    font-size: 145%;
+    line-height: 60px;
+    a {
+
+      @extend %fRight;
+      font-size: $font-size-small;
+      font-weight: 400;
+      color: $orange-light;
+    }
+  }
+  .addr {
+    @include clearfix;
+    margin: 0 -5px;
+    li {
+      @extend %fRight;
+      width: 24%;
+      height: 135px;
+      margin: 0 0.5% 1%;
+      position: relative;
+      .subsidiary {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        .activate {
+          display: none;
+          width: 100%;
+          height: 100%;
+          border: 1px solid $gray-d;
+          text-align: right;
+          padding: 10px;
+          color: $orange-light;
+          border: 1px solid $orange-light;;
+          a {
+            color: $orange-light;
+            padding: 0 5px;
+          }
+        }
+        &:hover {
+          .default {
+            display: none;
+          }
+          .activate {
+            display: block;
+          }
+        }
+
+      }
+      .default {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border: 4px solid desaturate(lighten($greenBase, 20%),30%);
+        overflow: hidden;
+        display: none;
+        i {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          padding-top: 7px;
+          padding-left: 7px;
+          background: desaturate(lighten($greenBase, 20%),30%);
+          color: $text-color-sub;
+          font-size: 160%;
+          line-height: 1;
+          @include border-radius(60px);
+          right: -33px;
+          bottom: -33px;
+        }
+        strong {
+          @extend %inline-block;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          padding: 0 10px;
+          background:  desaturate(lighten($greenBase, 20%),30%);
+          color: $text-color-sub;
+        }
+      }
+      .info {
+        padding: 15px;
+        line-height: 2;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $gray-d;
+        strong {
+          font-size: $font-size-base;
+        }
+        p {
+
+        }
+      }
+      &.current{
+        .default{
+          display: block;
+        }
+      }
+    }
+  }
+  .action-Bar {
+    margin-bottom: 30px;
+    a {
+      @extend %inline-block;
+      width: 100px;
+      height: 26px;
+      line-height: 24px;
+      border: 1px solid $gray-lighte;
+      background: $bodyBGC;
+      text-align: center;
+      margin-right: 10px;
+    }
+
+  }
+  .thead_cart {
+    border: 0;
+
+    th {
+      font-weight: 400;
+    }
+  }
+  .goods-info {
+    border: 1px solid $gray-lighter;
+
+    width: 100%;
+    margin-top: 10px;
+    thead {
+      th {
+        text-align: left;
+        font-weight: 400;
+        background: $gray-lighter;
+        padding: 3px 10px;
+        span {
+          padding-left: 50px;
+        }
+        a {
+          padding-left: 30px;
+
+        }
+      }
+    }
+    tbody {
+      td {
+        padding: 5PX;
+        border-bottom: 1px solid $gray-lighter;
+        img {
+          width: 60px;
+          height: 60px;
+          margin: 5px;
+        }
+        p {
+          color: $gray-lighte;
+          span {
+            padding-right: 10px;
+          }
+        }
+        input {
+          height: 22px;
+        }
+        select {
+          height: 22px;
+        }
+        table {
+          width: 100%;
+          border: none;
+          td, th {
+            border: none;
+            padding: 5px;
+          }
+          th {
+            text-align: right;
+            padding-right: 10px;
+          }
+          td {
+            input {
+              width: 200px;
+            }
+            select {
+              width: 200px;
+            }
+            em {
+              color: $orange-light;
+              padding: 0 10px;
+            }
+            button {
+              background: $orange-light;
+              color: $text-color-sub;
+              border: 0;
+              padding: 0 10px;
+              line-height: 22px;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      th {
+        border-bottom: 1px solid $gray-lighter;
+        font-weight: 400;
+      }
+      .message {
+        td {
+          background: lighten($redBase, 55%);
+          padding: 10px;
+          input {
+            width: 60%;
+            border: none;
+            margin: 0 10px;
+          }
+          select {
+            border: 1px solid $gray-d;
+            width: 12%;
+            margin: 0 10px;
+          }
+
+        }
+      }
+      .use-ticket {
+        td {
+          color: $orange-light;
+          line-height: 3;
+          padding: 0 10px;
+          i {
+            background: $orange-light;
+            color: $text-color-sub;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .total {
+    padding: 15px;
+    line-height: 2;
+    p {
+      text-align: right;
+      em {
+        color: $orange-light;
+        padding: 0 5px;
+      }
+      span {
+        @extend %inline-block;
+        width: 80px;
+        text-align: left;
+      }
+    }
+
+  }
+  .address {
+    padding: 15px;
+    background: $gray-lighter;
+    text-align: right;
+    color: $gray-light;
+    line-height: 2.2;
+  }
+  .submit {
+    color: $gray-light;
+    line-height: 50px;
+    text-align: right;
+    padding: 20px 0 50px;
+    strong {
+      font-size: 150%;
+      color: $orange-light;
+      margin: 0 10px;
+    }
+    button {
+      width: 125px;
+      height: 40px;
+      background: url("/resource/images/btn-orange-shade.png") 0 bottom repeat-x;
+      color: $text-color-sub;
+      font-size: 140%;
+      border: 0;
+      @include border-radius(3px);
+      margin-left: 20px;
+    }
+  }
+  .add-address-wrap{
+    position: absolute;
+    left:999999px;
+  }
+  .add-address{
+    font-size:$font-size-base;
+    h3{
+      font-size:$font-size-base;
+      padding:20px;
+      small{
+        font-weight: 400;
+        padding-left: 20px;
+        color: $gray-lighte;
+      }
+    }
+    table{
+      width: 90%;
+      margin:0 5%;
+      td{
+        padding: 4px 0;
+        p{
+          padding:15px 0;
+        }
+        button{
+          width: 150px;
+          height: 38px;
+          border: 1px solid $gray-light-c;
+          font-weight: $font-size-base;
+          background: url('/resource/images/btn-gray-shade.jpg') 0 bottom repeat-x;
+          @include border-radius(3px);
+        }
+        label{
+          padding-left: 10px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      th{
+        padding: 4px 8px;
+        text-align: right;
+      }
+      select{
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.shopping-cart-payment-order {
+  background: $body-bg;
+  margin: 30px 0;
+  padding: 15px 30px 50px;
+  h1 {
+    font-size: $font-size-large;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    small {
+      display: block;
+      font-weight: 400;
+      font-size: $font-size-base;
+      color: $gray-light;
+    }
+  }
+  .pay-info {
+    border: 1px solid $gray-d;
+    padding: 15px;
+    margin-bottom: 30px;
+    @include clearfix;
+    dt {
+      width: 215px;
+      line-height: 80px;
+      @extend %fLeft;
+      border-right: 1px solid $gray-d;
+      padding: 0 15px;
+      margin-right: 15px;
+      strong {
+        font-size: 160%;
+        color: lighten($redBase, 25%);
+        padding: 0 10px;
+      }
+    }
+    dd {
+      padding: 10px;
+      line-height: 2;
+      font-size: $font-size-base;
+    }
+  }
+  .payment-type {
+    background: lighten($redSub, 38.5%);
+    border-top: 3px solid $orange-lighter;
+    padding: 0 20px 20px;
+  }
+  .payment-section {
+    background: $body-bg;
+    border: 1px solid $gray-d;
+    margin-top: 20px;
+    @extend %cursor-pointer;
+    h2 {
+      font-size: 150%;
+      padding: 20px;
+      border-bottom: 1px solid $gray-d;
+      line-height: 34px;
+      i {
+        font-weight: 400;
+      }
+      span {
+        font-weight: 400;
+        &.info {
+          font-size: $font-size-base;
+          padding-left: 20px;
+          em, strong {
+            color: $orange-lighte;
+          }
+        }
+
+        &.Msc {
+          font-size: 90%;
+          background: $orange-lighter;
+          color: $text-color-sub;
+          padding: 0 2px;
+        }
+      }
+      small {
+        @extend %fRight;
+        color: $gray-light;
+        font-weight: 400;
+
+      }
+    }
+    .content {
+      padding: 30px 50px;
+      font-size: $font-size-base;
+      @include clearfix;
+      p {
+        margin-bottom: 5px;
+        i {
+          color: $greenBase;
+          margin-right: 5px;
+          font-size: 110%;
+        }
+      }
+      fieldset {
+        label {
+          display: block;
+          line-height: 3;
+        }
+        input {
+          @extend %inline-block;
+          margin-right: 10px;
+        }
+        a {
+          color: $orange-lighte;
+        }
+        .message-control {
+          font-size: $font-size-small;
+          color: $redSub;
+          i {
+            font-size: 110%;
+            margin-right: 5px;
+          }
+        }
+      }
+      li {
+        @extend %fLeft;
+        border: 1px solid $gray-d;
+        width: 16%;
+        height: 38px;
+        padding-left: 10px;
+        margin-right: 50px;
+        vertical-align: middle;
+        @include border-radius(2px);
+        img {
+          margin-left: 10px;
+          vertical-align: middle;
+        }
+      }
+    }
+    &.current {
+      border: 2px solid $orange-lighter;
+      h2 {
+        i {
+          color: $orange-lighte;
+        }
+      }
+    }
+  }
+  .payment-submit{
+    text-align: right;
+    padding:70px 0 40px;
+    button{
+      background: url("/resource/images/btn-orange-shade.png") 0 bottom repeat-x;
+      border: 0;
+      height: 40px;
+      width: 126px;
+      @include border-radius(3px);
+      font-size: 140%;
+      color: $btn-primary-color;
+    }
+  }
+}

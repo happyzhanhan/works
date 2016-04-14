@@ -1,0 +1,11 @@
+@charset "utf-8";
+/*
+圆角类
+*/
+// Single side border-radius
+
+@mixin customer-opacity($opacity) {
+  filter:alpha(opacity=$opacity*100); /*支持 IE 浏览器*/
+  -moz-opacity:$opacity; /*支持 FireFox 浏览器*/
+  opacity:$opacity; /*支持 Chrome, Opera, Safari 等浏览器*/
+}

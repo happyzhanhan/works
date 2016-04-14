@@ -1,0 +1,23 @@
+//==font
+
+@mixin fontFace($name,$file,$fontWeight:normal,$fontStyle:normal){
+  @font-face {
+    font-family: $name;
+    src: url(/resource/font/#{$file}.eot);//* IE9 Compat Modes */
+    src: url(/resource/font/#{$file}eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+    url(/resource/font/#{$file}woff) format('woff'), /* Modern Browsers */
+    url(/resource/font/#{$file}ttf) format('truetype'), /* Safari, Android, iOS */
+    url(/resource/font/#{$file}svg##{$name}) format('svg'); /* Legacy iOS */
+  }
+  font-weight: $fontWeight;
+  font-style: $fontStyle;
+}
+
+@mixin SelectedC($color:#ff0){/* Colors selected*/
+  ::selection{
+    color:$color;
+  }
+  ::-moz-selection{
+    color:$color;
+  }
+}

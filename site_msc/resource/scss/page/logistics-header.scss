@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.review_search{
+  width: 557px;
+  height: 39px;
+  margin-top: 10px;
+  @extend %fRight;
+  input{
+    height: 39px;
+    width: 448px;
+    border-left: 2px solid $orange;
+    border-top: 2px solid $orange;
+    border-bottom: 2px solid $orange;
+    @extend %fLeft;
+    border-right: 0;
+  }
+  button{
+    background: $orange;
+    width: 107px;
+    height: 39px;
+    color: $write;
+    font-size: $font-size-large;
+    border: 0;
+    @extend %fLeft;
+  }
+}

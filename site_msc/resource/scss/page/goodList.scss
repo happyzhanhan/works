@@ -1,0 +1,4 @@
+@import "../common/mixin/goodList";
+.goodListA{
+  @include goodListA();
+}

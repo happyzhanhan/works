@@ -1,0 +1,187 @@
+@charset "utf-8";
+/*
+这个页面确实可以直接用login~
+*/
+@import "../common/mixin/form-compose";
+//.bord{定义明确，且此类放到公用里去
+//  border-top:1px solid #e8e8e8;
+//  height:660px;
+//}
+//.w630{放到公用里去
+//  width:630px;
+//  margin:0 auto;
+//}
+.form-wrap {
+  padding-top: 15px;
+  .formSection {
+    @include inputSection(0);
+    .input-CAPTCHA {
+      width: 100px;
+      input {
+        width: 80px;
+      }
+    }
+    &.email, &.mail {
+      display: none;
+    }
+  }
+}
+
+.btn-main {
+  //clear: both;放心大敢的改，如果不改就是这样……
+  //float:left;
+  margin-left: 145px;
+  //text-align: center;
+  button {
+    width: 100px;
+    height: 38px;
+    font: 400 14px $font-family-base;
+    border: 0;
+    color: $write;
+    background: $gray-lighte;
+    @include border-radius(2px);
+    &.available {
+      background: $orangeSub;
+    }
+  }
+}
+
+.psd-title {
+  text-align: left;
+  padding-top: 44px;
+  h2 {
+    //font-size: 14px;
+    //font-family: "Microsoft YaHei";用变量
+    font: 400 14px/24px $font-family-base;
+    //margin-top: 44px;放到上级padding-top
+    //line-height: 24px;
+    color: $gray-8;
+    i {//最好用icon，这样不用切出图来，大小也可以控制，改变元素的流属性，也不用控制长宽，如果用的webicon，这块只要一个颜色就搞定
+      width: 16px;
+      height: 20px;
+      //display: inline-block;在ie6下有兼容问题所以用下边这种
+      @extend %inline-block;
+      background: url("/resource/images/findpsd.gif") no-repeat 0px -176px;
+      margin-right: 5px;
+      margin-top: 3px;
+      //float: left;
+      @extend %fLeft;
+    }
+    //b {
+    //  color: #8b8b8b;
+    //  font-weight: 100;
+    //}
+    em {//u标签换为em，约定：i为icon、图标，strong为突出、重点、加强，em为轻量级强调样式，span、cite结构类，small弱化语义、辅助类
+      //color: #ed6d1e;
+      color: $orangeSub;
+      //text-decoration: none;
+      //font-weight: 100;
+    }
+  }
+
+}
+
+.psd-step p {
+  width: 610px;
+  margin-left: 10px;
+}
+
+.psdstep {
+  height: 44px;
+  margin-top: 26px;
+  background-image: url('/resource/images/findpsd.gif');//对于强迫症的人来说，被报错是件很蛋疼的事……所以，还是改成项目目录吧
+  background-repeat: no-repeat;
+}
+//提炼共性成为^^^^
+.psdstep-01 {
+  background-position: 0 0;
+  //height: 44px;
+  //display: inline-block;p本身就是块状元素
+  //background: url("../images/findpsd.gif") no-repeat 0 -44px;
+  //margin-top: 26px;
+}
+
+.psdstep-02 {
+  background-position: 0 -44px;
+  //height: 44px;
+  //display: inline-block;
+  //background: url("../images/findpsd.gif") no-repeat 0 -44px;
+  //margin-top: 26px;
+}
+
+.psdstep-03 {
+  background-position: 0 -88px;
+//  height: 44px;
+//  display: inline-block;
+//  background: url("../images/findpsd.gif") no-repeat 0 -88px;
+//  margin-top: 26px;
+}
+
+.psdstep-04 {
+  background-position: 0 -132px;
+  //height: 44px;
+  //display: inline-block;
+  //background: url("../images/findpsd.gif") no-repeat 0 -132px;
+  //margin-top: 26px;
+}
+
+.psdstep-name {
+  width: 100%;
+  height: 30px;
+  //display: inline-block;
+  li {
+    font-family:$font-family-base;
+    font-size: 14px;
+    float: left;
+    color: #b7b7b7;
+    margin-right: 128px;
+  }
+  .def {
+    //color: #ed6d1e;
+    color: $orangeSub;
+  }
+  //.mr126 {统一128，最后一个没有
+  //  margin-right: 126px;
+  //}
+  //.mr133 {
+  //  margin-right: 133px;
+  //}
+  //.mr130 {
+  //  margin-right: 130px;
+  //}
+  .last{
+    margin-right: 0;
+  }
+}
+
+.stepFour{
+  width:390px;
+  font-family: "Microsoft YaHei";
+   .happyFace{
+    width:62px;
+    height:62px;
+    display: inline-block;
+    background:url("/resource/images/findpsd.gif") no-repeat -16px -179px;
+     margin-right:10px;
+   }
+   dd{
+     width:300px;
+     float:right;
+     text-align: left;
+     font-size:14px;
+     line-height:32px;
+     b{
+       font-size:16px;
+       color:#ed6d1e;
+     }
+    em{
+
+      color:#aaaaaa;
+    }
+    a{
+      color:#736b6b;
+
+    }
+  }
+}
+

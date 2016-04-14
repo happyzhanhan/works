@@ -1,0 +1,13 @@
+@charset "utf-8";
+/*
+结构颜色
+*/
+@mixin dl-color($color){
+  dt{color: $color;}
+  dd{
+    a:hover{
+      color:$color;
+      text-decoration: none;
+    }
+  }
+}

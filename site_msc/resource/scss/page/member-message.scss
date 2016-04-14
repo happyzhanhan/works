@@ -1,0 +1,160 @@
+.message_action_box{
+  @include redBgTitle;
+  .select-selection{
+    @extend %fRight;
+    width: 120px;
+    height: 24px;
+    border: 1px solid $gray-light-c;
+    background: $body-bg;
+    margin: 8px 15px;
+    line-height: 22px;
+    position: relative;
+    text-align: center;
+    span{
+      width: 100%;
+      display: block;
+      height: 22px;
+      margin-bottom: 5px;
+      cursor: pointer;
+
+    }
+    ul{
+      display: none;
+      position: absolute;
+      line-height: 2;
+      width: 100%;
+      background: $body-bg;
+      border: 1px solid $gray-light-c;
+      li{
+        cursor: pointer;
+        &.current,&:hover{
+          background: $orangeBase;
+          color: $text-color-sub;
+        }
+      }
+    }
+  }
+  .head_action{
+    @extend %fLeft;
+    width: 30%;
+    padding-left:$gird-padding;
+    .choose_all{
+      @extend %fLeft;
+      cursor: pointer;
+      width: 60px;
+      input{
+        margin-right: 5px;
+        margin-bottom: 3px;
+      }
+    }
+    .delete_choose{
+      @extend %fLeft;
+      width: 70px;
+      cursor: pointer;
+    }
+    .read_choose{
+      @extend %fLeft;
+      cursor: pointer;
+    }
+
+  }
+  .head_title{
+    text-align: center;
+   }
+}
+.message_content{
+  padding:10px $gird-padding;
+
+  dt{
+    font-size:$font-size-base;
+    font-weight: 700;
+    color:darken($blueBase,8%);
+    margin:10px 0;
+    border-bottom: 2px solid lighten($blueBase,40%);
+  }
+  dd{
+    @include clearfix;
+    background: $gray-lighter;
+    margin-bottom: 10px;
+    position: relative;
+    padding:0 30px;
+    %p-t{
+      position: absolute;
+      top:5px;
+    }
+    .delete{
+      @extend %p-t;
+      right:8px;
+    }
+    .choose{
+      @extend %p-t;
+      left: 8px;
+    }
+    .title{
+      line-height: 2.5;
+      border-bottom: 1px solid $gray-b;
+      font-size:$font-size-base;
+      font-weight: 700;
+      color: $gray-dark;
+    }
+    .content{
+      font-size:$font-size-base;
+      line-height: 2.5;
+      color: $gray-dark;
+    }
+    .property{
+      padding-bottom: 10px;
+      a{
+        @extend %fRight;
+        font-size:$font-size-base;
+        color: lighten($blueBase,5%);
+        padding-left: 20px;
+      }
+      em{
+        @extend %fRight;
+        font-size:$font-size-base;
+        color: darken($greenBase,5%);
+        padding-left: 20px;
+        &.unread{
+          color: lighten($redBase,10%);
+
+        }
+      }
+    }
+  }
+}
+.logistics-message{
+  padding:0 $gird-padding;
+  li{
+    border-bottom: 1px solid $gray-light-c;
+    padding:10px 0;
+    .thum{
+      @extend %fLeft;
+      width: 120px;
+      height: 120px;
+      margin:0 50px;
+      img{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .title{
+      font-size:$font-size-base;
+      margin-bottom: 10px;
+      strong{
+        color: $gray-dark;
+
+      }
+    }
+    a{
+      display: block;
+      font-size:$font-size-base;
+      color: lighten($blueBase,5%);
+      line-height: 3;
+    }
+    &.last{
+      border: 0;
+    }
+  }
+}

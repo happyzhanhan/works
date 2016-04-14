@@ -1,0 +1,341 @@
+@charset "utf-8";
+
+.pageInfo {
+  line-height: 40px;
+  color: $gray-light;
+  h2 {
+    font: 400 18px/40px $font-family-base;
+  }
+  small {
+    @extend %fRight;
+    a {
+      color: $orangeBase;
+      padding-left: 10px;
+    }
+  }
+}
+
+.sigin-form {
+  background: $body-bg;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  @include make-container-with-border();
+
+}
+
+.sigin-poster {
+  @extend %fRight;
+  width: 500px;
+  height: 550px;
+  img {
+    display: block;
+    width: 500px;
+    height: 550px;
+  }
+}
+
+.form-wrap {
+  width: 550px;
+  padding-top: 15px;
+  .formSection {
+    @include inputSection(0,25%,50%);
+    &.email, &.mail {
+      display: none;
+    }
+  }
+  .protocol {
+    padding: 18px 0 0 140px;;
+    label {
+      display: inline;
+      width: auto;
+    }
+    input {
+      margin-right: 10px;
+    }
+  }
+  .sigin {
+    padding: 18px 0 0 142px;
+    button {
+      width: 240px;
+      height: 35px;
+      background: $orangeBase;
+      border: none;
+      font: 400 16px $font-family-base;
+      color: $btn-success-color;
+      @include border-radius(3px);
+    }
+  }
+}
+
+.top {
+  background: $body-bg; /*top背景白色*/
+
+}
+
+.Research {
+  clear: both;
+  text-align: right;
+  font: 400 14px/3 $font-family-base;
+  color: $gray-light;
+  i {
+    font-size: 16px;
+    color: $orangeBase;
+    padding-right: 5px;
+  }
+}
+
+// happy make in 2016-03-10
+.loginMain {
+  width: 100%;
+  height: 600px;
+  //margin-bottom:100px;footer部分背景为白色，如果这里margin下去，margin的部分背景是body的灰色，还要想办法再补救，不如直接把这部分边距给footer部分，再给footer部分加一个上填充100的类名，如果没有，再追加
+  background:url(http://static.33m.com/MSC/resource/images/ceshi.jpg) no-repeat;
+}
+
+.login-adlink {
+  @extend %fLeft;
+  width: 480px;
+  height: 400px;
+  /*background: #ff2d2d;*/
+  margin-top: 100px;
+  margin-left: 100px;
+  a {
+    color: #fff;
+    font-size: 80px;
+    text-align: center;
+  }
+}
+
+
+//kant make in 2016-3-11
+
+.sigin-succeed {
+  background: $write;
+  font-family: $font-family-base;
+  h1 {
+    padding-top: 30px;
+    color: $orangeT;
+    line-height: 2;
+  }
+  p {
+    font-size: $font-size-base;
+    color: $gray-light;
+  }
+  .reward {
+    padding: 50px 0;
+    height: 180px;
+    li {
+      @extend %fLeft;
+      width: 49%;
+      img {
+        @extend %fLeft;
+        margin: -25px 0 -25px 50px;
+      }
+      h2 {
+        margin-left: 250px;
+        font-size: 18px;
+        color: $orangeBase;
+        font-weight: 400;
+      }
+      p {
+        margin-left: 250px;
+        color: $gray-dark;
+        em {
+          color: $orangeBase;
+        }
+      }
+    }
+  }
+  .btn-main {
+    clear: both;
+    text-align: center;
+    button {
+      width: 130px;
+      height: 38px;
+      font: 400 14px $font-family-base;
+      border: 0;
+      color: $write;
+      background: $gray-lighte;
+      @include border-radius(2px);
+      &.available {
+        background: $orangeSub;
+      }
+    }
+  }
+  .succeed-message {
+    padding: 50px 0;
+    h3 {
+      font: 400 14px/3 $font-family-base;
+      color: $gray-light;
+    }
+    p {
+      line-height: 2;
+      em {
+        color: $orangeBase;
+      }
+    }
+  }
+}
+
+/*
+create by kant on 2016-3-12 21:04:40.93
+*/
+
+.login-layout {
+  @extend %fRight;
+  width: 350px;
+  height: 350px;
+  background: $body-bg;
+  margin-top: 125px;
+  position: relative;
+  .cut-pc-app {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    .icon-1, .icon-2 {
+      width: 60px;
+      height: 65px;
+      img {
+        float: right;
+      }
+    }
+    .icon-2 {
+      display: none;
+    }
+    .icon-1{
+      span{
+        position: absolute;
+        display: none;
+        width: 122px;
+        height: 17px;
+        right: 50px;
+        top: 27px;
+        background: url("/resource/images/login-cut-info.png") no-repeat 0 0;
+      }
+    }
+  }
+  .login-main {
+    padding: 15px 25px;
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+    h2 {
+      font: 400 20px/2 $font-family-base;
+      color: $orangeSub;
+    }
+    fieldset {
+      border: 0;
+      padding: 0;
+      @include inputSection-2;
+      .password{
+        display: none;
+      }
+      .trendsPW {
+        .input-text{
+          width: 150px;
+        }
+        button{
+          @extend %fRight;
+          height: 36px;
+          border: 1px solid $gray-light-c;
+          background: $gray-lighter;
+          width: 135px;
+          font-family: $font-family-base;
+          color: $gray-light;
+          font-weight: 700;
+        }
+      }
+      .proving{
+        display: none;
+        padding-top: 5px;
+        label{
+          color: $gray-dark;
+        }
+        .provingContent{
+          height: 44px;
+        }
+      }
+      .assist{
+        line-height: 2.5;
+        font-size:$font-size-small;
+        color: $gray;
+        span{
+          @extend %fRight;
+        }
+        input{
+          margin-right: 5px;
+          vertical-align: middle;
+          line-height: 1;
+        }
+      }
+      .btn-button{
+        padding:10px 0;
+        button{
+          width: 100%;
+          height: 40px;
+          border: 0;
+          background: $orangeSub;
+          font-family: $font-family-base;
+          color: $btn-danger-color;
+          font-size:$btn-size-lg;
+        }
+      }
+    }
+    .cut-p-m {
+      line-height: 2;
+      padding-bottom: 10px;
+      input {
+        margin-right: 5px;
+      }
+      label {
+        margin-right: 15px;
+        color: $gray-light;
+      }
+    }
+    .pc {
+      //display: none;
+    }
+    .app {
+      display: none;
+      p{
+        line-height: 2;
+        color: $gray-6;
+      }
+      .code{
+        text-align: center;
+        padding: 30px 0 10px;
+        img{
+          border: 1px solid $gray-light-c;
+        }
+      }
+      .message{
+        margin:0 45px 30px;
+        color:$gray-lighte;
+        strong{
+          display: block;
+        }
+      }
+    }
+    .info {
+      font-size:$font-size-small;
+      color: $gray-light;
+      em{
+        color: $orangeSub;
+      }
+    }
+  }
+}
+.login-layout2{
+  height: 430px;
+  margin-top: 85px;
+  .login-main{
+    fieldset{
+      .proving{
+        display: block;
+      }
+    }
+  }
+}
+
+
+

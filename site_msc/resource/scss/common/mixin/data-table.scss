@@ -1,0 +1,55 @@
+@charset "utf-8";
+/*
+create by kant on 2016-03-18 20:17
+
+数据表格
+*/
+@mixin address-list() {
+  border: 1px solid $gray-light-c;
+  %p-base {
+    padding: $padding-base-vertical;
+
+  }
+  th {
+    @extend %p-base;
+    background: $gray-lighter;
+    text-align: left;
+    text-indent: 10px;
+    font-size:$font-size-base;
+  }
+  td {
+    @extend %p-base;
+    font-size:13px;
+    .operate {
+      position: relative;
+      a {
+        color: $blueBase;
+        margin-right: $margin-large-horizontal;
+      }
+      %p-h-base {
+        padding: 0 $padding-base-horizontal;
+      }
+      span {
+        display: none;
+        @extend %p-h-base;
+        background-color: $bg-orange-light;
+        color: $text-color-sub;
+      }
+      cite {
+        @extend %p-h-base;
+        @extend %cursor-pointer;
+      }
+    }
+  }
+  &.activate {
+    border-color: $bg-orange-light;
+    .operate{
+      cite{
+        display: none;
+      }
+      span{
+        display: inline;
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@charset "utf-8";
+/*
+商品列表
+*/
+@mixin goodListA($button:none){//全行，一行五列，平均大小、分布
+  font-family: $font-family-base;
+  padding:40px 0;
+  .title{
+    margin-bottom: 15px;
+    border-bottom: 1px solid $gray-lighte;
+    font:400 16px/2 $font-family-base;
+    span{
+      @extend %fRight;
+      font-size:$font-size-base;
+      color: $gray-b;
+      i{
+        margin-right: 10px;
+      }
+    }
+    cite{
+      font-size:$font-size-base;
+      @extend %inline-block;
+      margin-right: 20px;
+      &.current{
+        border-bottom: 2px solid $orange-light;
+        color: $orange-light;
+        font-weight: 700;
+      }
+    }
+  }
+  ul{
+    @include clearfix();
+    li{
+      @extend %fLeft;
+      width: 210px;
+      @if $button =='none'{
+        height: 290px;
+      }@else {
+        height:320px;
+        button{
+          border: 1px solid $gray-b;
+          width: 80px;
+          background: $body-bg;
+          margin-top: 10px;
+          margin-left: 10px;
+          color: $gray;
+          @include border-radius(2px)
+        }
+      }
+      margin:0 5px;
+      background: $bgc;
+      a{
+        .thum{
+          display: block;
+          height: 210px;
+          overflow: hidden;
+          margin-bottom: 5px;
+          img{
+            display: block;
+            width: 210px;
+            height: 210px;
+          }
+        }
+        p{
+          padding: 5px 10px;
+          height: 46px;
+          line-height: 18px;
+          overflow: hidden;
+          color: $gray-light;
+        }
+        strong{
+          display: block;
+          padding:0 10px;
+          color: $redSub;
+          font-weight: 400;
+        }
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

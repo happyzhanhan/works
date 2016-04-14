@@ -1,0 +1,166 @@
+/*
+box model;
+*/
+//==margin padding
+%m0p0{
+	margin:0;
+	padding:0;
+}
+%mLmRAuto {
+	margin-left:auto;
+	margin-right:auto;
+}
+%m-0-auto{
+	margin: 0 auto;
+}
+
+//==font
+
+%fDefault{
+	font:#{$font-size-small}/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+}
+%fz100{
+	font-size:100%;
+}
+%fzDefault{
+	font-size:$font-size-small;
+}
+%fsNormal{
+	font-style:normal;
+}
+%cFz-12{
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+%orange-font{
+	color:$orange;
+}
+%orange-light-font{
+	color:$orange-light;
+}
+%color-glc{
+	color:$gray-light-c ;
+}
+%color-gle{
+	color:$gray-lighte ;
+}
+%color-gl{
+	color:$gray-light ;
+}
+%color-ol{
+	color:$orange-light ;
+}
+%color-o{
+	color:$orange;
+}
+%iconfont{
+	font-family: 'iconfont';
+}
+//==border
+%bd0{
+	border:0;
+}
+%bdc{
+	border: 1px solid $gray-light-c;
+}
+%bdb-dotted-glc{
+	border-bottom: 1px dotted $gray-light-c;
+}
+%bd-dotted-glc{
+	border: 1px dotted $gray-light-c;
+}
+%bdb-solid-glc{
+	border-bottom: 1px solid $gray-light-c;
+}
+%bd-solid-glc{
+	border: 1px solid $gray-light-c;
+}
+//==align
+%vAMiddle{
+	vertical-align: middle;
+}
+%vaTop{
+	vertical-align: top;
+}
+//==float
+%fLeft{
+	float: left;
+}
+%fRight{
+	float: right;
+}
+
+//==clear
+
+%clearFix{
+	&:after{
+		content:'\20';
+		display:block;
+		height:0;
+		clear:both;
+		}
+	*zoom:1;
+}
+//==style==
+%cursor-pointer{
+	cursor: pointer;
+}
+//===table
+//
+%base-table{
+	width: 95%;
+	@extend %m-0-auto;
+	@extend %bd-solid-glc;
+	line-height: 50px;
+	margin-bottom: 20px;
+	th{
+		@extend %bdb-solid-glc;
+	}
+	td{
+		@extend %bdb-solid-glc;
+		padding:0 5px;
+		.checkbox{
+			margin:0 10px;
+		}
+		.input-text{
+			padding:7px;
+			color:$gray-lighte;
+			_color:$gray;
+			&:focus{
+				color:$gray;
+			}
+		}
+		cite{
+			color:$orange-light;
+			@extend %cursor-pointer;
+		}
+		a{
+			color:$orange;
+		}
+	}
+	tr.edit{
+		background-color: $gray-lighter;
+	}
+}
+%pngHtc{
+  behavior: url("../images/iepngfix.htc");
+}
+
+//==box
+
+%member-right-con-1{
+	width: 94%;
+	margin:$margin-base-vertical 3%;
+}
+
+//display
+%inline-block{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+}
+%box-sizing{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>买家提交申请2</title>
+    <link rel="shortcut icon" href="http://static.33m.com/MSC/resource/images/bitbug_favicon.ico"/>
+    <link rel="stylesheet" href="/resource/css/reset.css">
+    <link rel="stylesheet" href="/resource/css/common.css">
+    <link rel="stylesheet" href="/resource/css/buyer-commit-apply.css">
+    <link rel="stylesheet" href="/resource/css/layout.css">
+    <script src="http://static.33m.com/MSC/resource/js/jquery-1.12.1.min.js"></script>
+    <script src="/resource/js/ie-compatibility.js"></script>
+</head>
+<body>
+.serviceinfo>h3{服务说明}+(.request>strong{1、我要退货}+p{申请条件：若为商品问题，或者不想要了且与卖家达成一致退货，请选择“我要退货”}+p{退货流程：1申请退货 2.商家发送退货地址给买家 3.买家退货并填写退货物流信息 4.商家确认收货，退货成功})*2
+
+</body>
+</html>

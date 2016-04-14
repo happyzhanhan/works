@@ -1,0 +1,164 @@
+@charset "utf-8";
+/*
+member left
+create by kant in 2016-03-18 03:40
+*/
+.member-left {
+  font-family: $font-family-base;
+  @extend %fLeft;
+  width: $memer-left-width;
+  %member-left-bg {
+    background: $body-bg;
+  }
+  %member-left-bd {
+    border: 1px solid $gray-light-c;
+  }
+  .member-info-small {
+    @extend %member-left-bg;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    @extend %member-left-bd;
+    margin-bottom:$margin-xs-horizontal;
+    .head-portrait {
+      position: relative;
+      @extend %fLeft;
+      width: 60px;
+      height: 60px;
+      margin: 0 $margin-base-horizontal;
+      img {
+        display: block;
+        width: 60px;
+        height: 60px;
+      }
+      .head-portrait-cover {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background: url("/resource/images/head-portrait-bg.png") 0 0 no-repeat;
+      }
+    }
+    %member-info-s-p {
+      display: block;
+      font: 400 $font-size-h4 $font-family-base;
+      line-height: 26px;
+    }
+    %member-info-c-g {
+      color: $gray-light;
+    }
+    strong {
+      @extend %member-info-s-p;
+      color: $text-color-orange;
+      padding-top: $padding-small-vertical;
+      @extend %member-info-c-g;
+    }
+    span {
+      @extend %member-info-s-p;
+      padding-bottom: $padding-small-vertical;
+      @extend %member-info-c-g;
+    }
+    .integral {
+      cite {
+        @extend %inline-block;
+        width: 49%;
+        text-align: center;
+        line-height: 2;
+        em {
+          color: $text-color-orange;
+        }
+      }
+      @extend %member-info-c-g;
+    }
+  }
+  %title-i {
+    @extend %inline-block;
+    width: 55px;
+    text-align: right;
+    padding-right: $padding-small-horizontal;
+    color: $text-color-gray;
+  }
+  .member_info_modify {
+    background: $bgc;
+    padding: 5px;
+    font-size: $font-size-base;
+    border-bottom: 1px solid $gray-light-c;
+    p{
+      font-size: $font-size-small;
+      i{
+        color: $orange;
+      }
+      em.authenticate{
+        color: $orange;
+      }
+    }
+    .moddifyimg {
+      background: $gray-lighter;
+      @include border-radius(50%);
+      width: 120px;
+      height: 120px;
+      margin: 0px auto 18px auto;
+      p{
+        line-height: 120px;
+        text-align: center;
+        font-size: $font-size-h4;
+      }
+
+    }
+    em.name {
+      font-size: $font-size-h4;
+      color: $orange;
+      text-align: center;
+      @extend %inline-block;
+      width: 100%;
+    }
+    p.fine {
+      text-align: center;
+      font-size: $font-size-h4;
+      line-height: 30px;
+    }
+    p.time {
+      color: $gray;
+    }
+
+
+  }
+
+  h3 {
+    @extend %member-left-bd;
+    background: $bodyBGC;
+    border-top-width: 0;
+    line-height: 40px;
+    font-size: $font-size-base;
+    @extend %cursor-pointer;
+    i {
+      @extend %title-i;
+    }
+    &.first{
+      border-top-width:1px;
+    }
+  }
+  ul {
+    @extend %member-left-bd;
+    @extend %member-left-bg;
+    border-top: 0;
+    line-height: 30px;
+    font-size: $font-size-base;
+    padding: $padding-small-vertical;
+    li {
+      @extend %cursor-pointer;
+      i {
+        @extend %title-i;
+      }
+      a {
+        color: $text-color-gray;
+        &:hover {
+          color: $text-color-orange;
+          text-decoration: none;
+          i {
+            color: $text-color-orange;;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+@charset "utf-8";
+/*
+排版
+
+create by kant in 2016-3-18 04:11
+*/
+
+@mixin color-page-header($bgColor:$orangeBase,$height:80px,$form-height:36px,$nav-font-size:14px,$bgColorSub:$orange-hover-base) {
+  height: $height;
+  background: $bgColor;
+  .btn-Ribbon {
+    @extend %fRight;
+    width: 160px;
+    margin-top: $height/4;
+    a {
+      @extend %fRight;
+      width: 150px;
+      font: 400 14px $font-family-base;
+      line-height: $form-height - 2;
+      background: $body-bg;
+      text-align: center;
+      color: $gray-light;
+
+    }
+  }
+  .search-Ribbon {
+    @extend %fRight;
+    margin-top:$height/4;
+    width: 280px;
+    background: $body-bg;
+    height: $form-height;
+    font-size: 14px;
+    font-family: $font-family-base;
+    @include box-shadow($gray-light-c inset,1px,1px,2px,0);
+    input {
+      width: 190px;
+      border: 0;
+      font-family: $font-family-base;
+      outline: none;
+      line-height: $form-height;
+      height: $form-height;
+      padding-left: 10px;
+      background: none;
+    }
+    button {
+      @extend %fRight;
+      width: 70px;
+      height: $form-height;
+      border: 0;
+      background: $gray-lighter;
+      color: $gray-light;
+      font-family: $font-family-base;
+    }
+  }
+  .nav-Ribbon {
+    @extend %fRight;
+    padding-right: 10px;
+
+    a {
+      font: 400 $nav-font-size/1 $font-family-base;
+      @extend %inline-block;
+      color: $write;
+      padding:0 30px;
+      line-height: $height;
+      &:hover{
+        background: $bgColorSub;
+        text-decoration: none;
+      }
+      i{
+        line-height: 78px;
+      }
+    }
+  }
+  .logo {
+    padding-top: $padding-large-vertical;
+    font:400 $font-size-large $font-family-base;
+    line-height:$height - $padding-large-vertical*2;
+    color: $text-color-sub;
+    img{
+      vertical-align: middle;
+    }
+  }
+}
+@mixin orange-page-header($bgColor:$orangeBase,$height:80px,$form-height:36px,$nav-font-size:14px,$bgColorSub:$orange-hover-base){
+  @include color-page-header($bgColor,$height,$form-height,$nav-font-size,$bgColorSub);
+}
+@mixin blue-page-header($bgColor:$blueSub,$height:80px,$form-height:36px,$nav-font-size:14px,$bgColorSub:$blue-hover-sub){
+  @include color-page-header($bgColor,$height,$form-height,$nav-font-size,$bgColorSub);
+}
+@mixin write-page-header($height:105px){
+  height: $height;
+  h1{
+    font:400 22px $font-family-base;
+    line-height:$height;
+    small{
+      @extend %fRight;
+      margin-top: 60px;
+      font-size:$font-size-base;
+      line-height: 2;
+      color: $gray-light;
+      i{
+        margin-right: 10px;
+        font-size: 16px;
+        color: $orangeSub;
+      }
+    }
+  }
+  .logo {
+    padding-top: $padding-large-vertical;
+    font:400 $font-size-base*1.5 $font-family-base;
+    line-height:$height - $padding-large-vertical*2;
+    color: $text-color-base;
+    img{
+      vertical-align: middle;
+      margin-top: 0;
+    }
+  }
+  img{
+    @extend %fLeft;
+    margin: 25px 15px 0 0;
+  }
+}
+@mixin redBgTitle($lingheight:40px){
+  background: lighten($redBase, 60%);
+  height: $lingheight;
+  margin:0 $gird-padding;
+  font-size:$font-size-base;
+  line-height: $lingheight;}

@@ -1,0 +1,106 @@
+@charset "utf-8";
+.member-right {
+  h1 {
+    font-size: 16px;
+  }
+}
+
+.evaluatio-management-info{
+  margin: 0 15px;
+  .evaluatio-management-title{
+    width: 100%;
+    margin-top: 10px;
+    background: url("../images/evaluatio.png") 0 bottom repeat-x;
+    @extend %clearFix;
+    li{
+      @extend %fLeft;
+      height: 35px;
+      line-height: 35px;
+      margin-right: 26px;
+      margin-bottom: 8px;
+      font-size: $font-family-base;
+      color: #3d3d3d;
+      .current{
+        color: $orange-light;
+        padding-bottom: 3px;
+        border-bottom: 2px solid $orange-light;;
+      }
+      em{
+        vertical-align: super;
+        font-size:9px;
+        color: #fff;
+        padding: 0 4px;
+        background-color: $orange-light;
+        @include border-radius(8px);
+      }
+    }
+  }
+  table{
+    width: 100%;
+    margin-top: 18px;
+    thead th{
+      background-color: #e5e5e5;
+      height: 28px;
+      line-height: 28px;
+      font-size: $font-size-base;
+      color: #696969;
+      text-align: left;
+      font-weight: normal;
+      span{
+        display: block;
+        text-align: center;
+      }
+    }
+
+    tbody td{
+      padding-top: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #d2d2d2;
+      em{
+        color: $gray-base;
+      }
+      a{
+        color: #1f82e7;
+        span{
+          color: $text-color-orange;
+        }
+        em{
+          color: $gray-base;
+        }
+      }
+      .evaluatio-management-img{
+        dt{
+          color: $gray-base;
+        }
+        dd{
+          @extend %fLeft;
+          img{
+            width: 40px;
+            height: 40px;
+            border: 1px #e5e5e5 solid;
+            margin-top: 5px;
+            margin-right: 11px;
+          }
+        }
+      }
+    }
+    tbody th{
+      font-weight: normal;
+      border-bottom: 1px solid #d2d2d2;
+      em{
+        color: $gray-base;
+      }
+      a{
+        padding: 3px 6px;
+        border: 1px solid #b5b5b5;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

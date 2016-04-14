@@ -1,0 +1,188 @@
+@charset "utf-8";
+/**
+ * Created by wwp9 on 2016-03-30.
+ */
+//以下样式refunded_right 和refunded_left为商家处理退款完毕的页面样式。
+%padding-y-10 {
+  padding: 10px 0px;
+}
+
+.refunded_left {
+  width: 452px;
+  @extend %fLeft;
+  table {
+    width: 100%;
+  }
+  th {
+    width: 144px;
+    font-size: $font-size-base;
+    color: $gray;
+    line-height: 2;
+    vertical-align: top;
+    text-align: right;
+    @extend %padding-y-10;
+  }
+  td {
+    width: 307px;
+    font-size: $font-size-base;
+    color: $gray;
+    line-height: 2;
+    vertical-align: top;
+    text-align: left;
+    @extend %padding-y-10;
+    em {
+      &.orange {
+        color: $orange;
+      }
+      &.blue {
+        color: $blueBase;
+        line-height: 30px;
+        vertical-align: top;
+      }
+    }
+    b {
+      font-size: $font-size-h4;
+      line-height: 30px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    img {
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+
+}
+
+.refunded_right {
+  width: 365px;
+  @extend %fRight;
+  padding: 5px 5px 15px 5px;
+  background: $bodyBGC;
+  margin:5px 5px 5px 0;
+  display: inline;
+  .sub_info {
+    line-height: 1.2;
+
+    thead {
+      th {
+        line-height: 2.5;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        h3 {
+          border-bottom: 1px solid $gray-light-c;
+          font-size: $font-size-base;
+          padding-left: 5px;
+        }
+      }
+    }
+    tbody {
+      th {
+        width: 86px;
+        font-size: $font-size-base;
+        color: $gray-dark;
+        text-align: left;
+        padding: 5px 10px 5px 15px;
+        vertical-align: top;
+      }
+      td {
+        font-size: $font-size-base;
+        color: $gray-dark;
+        vertical-align: top;
+        padding: 5px 10px;
+        img {
+          @extend %inline-block;
+          margin-right: 5px;
+        }
+        &.logistics-info {
+          font-size: $font-size-base;
+          color: $gray-dark;
+          p{
+            line-height: 2;
+            margin-top: 5px;
+            padding-left: 5px;
+            border-top: 1px solid $gray-light-c;
+          }
+          em {
+            color: $gray;
+            font-size: $font-size-small;
+          }
+          input {
+            height: 35px;
+            line-height: 35px;
+            padding: 0 5px;
+            color: $gray-light;
+            font-size: $font-family-base;
+            width: 100%;
+            margin:5px 0;
+            border: 1px $gray-light-c solid;
+          }
+          button {
+            border: 1px solid $gray-light-c;
+            @include border-radius(3px);
+            width: 146px;
+            height: 28px;
+            background: url(/resource/images/business_refun.jpg) repeat-x;
+            &.sub{
+            color: $gray-dark;
+            }
+            &.besubed{
+              color: $gray-light;
+          }
+          }
+        }
+      }
+    }
+  }
+}
+
+//以下为等待商家处理退货等待页面。
+.refund-wait {
+  table {
+    width: 100%;
+    line-height: 2;
+    font-size: $font-size-base;
+    color: $gray;
+
+  }
+  th {
+    width: 144px;
+    vertical-align: top;
+    text-align: right;
+    @extend %padding-y-10;
+  }
+  td {
+    vertical-align: top;
+    text-align: left;
+    @extend %padding-y-10;
+    em {
+      font-size: $font-size-small;
+      &.orange {
+        color: $orange;
+      }
+      &.orange-14 {
+        color: $orange;
+        font-size: $font-size-base;
+      }
+      &.blue {
+        color: $blueBase;
+        line-height: 30px;
+        vertical-align: top;
+      }
+    }
+    span {
+      font-size: $font-size-small;
+    }
+    b {
+      font-size: $font-size-large;
+      line-height: 30px;
+      @extend %inline-block;
+      vertical-align: top;
+    }
+    img {
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+
+}

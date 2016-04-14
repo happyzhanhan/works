@@ -1,0 +1,211 @@
+
+.siteNav{
+  background: $body-bg;
+  height:30px;
+  @include clearfix;
+  .siteNavBdR{
+    line-height:20px;
+    li{
+      position: relative;
+      @extend %fRight;
+      width: 105px;
+      margin-left: -1px;
+      height: 30px;
+      .tag{
+        position: relative;
+        z-index: 1;
+        border-left: 1px dotted $gray-lighter;
+        padding: 0 10px;
+        white-space: nowrap;
+        margin-top: 5px;
+        cursor: pointer;
+        i{
+          font-size:$font-size-base;
+          padding-right:2px;
+          color:$gray-light;
+          em{
+            display: none;
+          }
+          &.fRight{
+            padding:0;
+            font-size:$font-size-small;
+          }
+        }
+      }
+      .content{
+        display: none;
+        position: absolute;
+        top:30px;
+        width: 105px;
+        background: $body-bg;
+        border: 1px solid $gray-lighter;
+        z-index: 1;
+        .list{
+          padding:5px 10px 10px;
+          line-height:22px;
+          li{
+            width: 100%;
+            float: none;
+          }
+        }
+      }
+      &.map{
+        .content{
+          right:0;
+          width: $header-map-width;
+          height: 210px;
+          dl {
+            @extend %fLeft;
+            width:(($header-map-width - 4) / 11) * 3;
+            height: 190px;
+            padding: 0 $gird-padding;
+            margin:10px 0;
+            border-right: 1px solid $gray-lighter;
+            dt {
+              font: 400 16px / 4 $font-family-base;
+            }
+            dd {
+              line-height:26px;
+              a {
+                @extend %fLeft;
+                width: 33.3%;
+                padding:0 $gird-padding;
+              }
+            }
+            &.new {
+              width:(($header-map-width - 2) / 11) * 2;
+              @include dl-color($orangeBase);
+              a{
+                width: 50%;
+              }
+            }
+            &.hot {
+              @include dl-color($blueBase);
+            }
+            &.more {
+              @include dl-color($redBase);
+            }
+            &.help{
+              border:0;
+              dd{
+                a:hover{
+                  color: $gray-dark;
+                }
+              }
+            }
+          }
+        }
+      }
+      &.service{
+        .content{
+          width: 160px;
+          height: 100px;
+          p{
+            padding:3px 20px;
+            line-height:20px;
+            i{
+              color: $redBase;
+              font-size:$font-size-large;
+            }
+          }
+        }
+      }
+      &.app{
+        .content{
+          width:205px;
+          height: 145px;
+          padding-right: 7px;
+          p{
+            padding:10px 7px 0 7px;
+            font:400 $font-size-base $font-family-base;
+          }
+          ul{
+            @extend %fRight;
+            width:90px;
+            li{
+              width:83px;
+              height: 40px;
+              line-height: 40px;
+              margin-top: 10px;
+              background: $gray-lighter;
+              @include border-radius(3px);
+              color: $gray-light;
+              cursor: pointer;
+              text-align: center;
+              i{
+                font-size:$font-size-h3;
+              }
+              &.current{
+                background: $orangeBase;
+                color: $body-bg;
+              }
+            }
+          }
+          div{
+            width: 104px;
+            padding:5px;
+            img{
+              display: none;
+              width: 104px;
+              height: 104px;
+            }
+          }
+        }
+      }
+      &.cart{
+        .tag{
+          i,cite{
+            color:$redBase;
+          }
+        }
+      }
+      &.current{
+        .tag{
+          height:30px;
+          margin: 0;
+          z-index: 2;
+          border: 1px solid $gray-lighter;
+          border-bottom:0;
+          background: $body-bg;
+          line-height: 29px;
+          color: $redBase;
+          i{
+            color: $redBase;
+            span{
+              display: none;
+            }
+            em{
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+  .siteNavBdL{
+    line-height: 30px;
+    a{
+      padding-left:10px;
+      &.sigin{
+        color:$redBase;
+      }
+    }
+  }
+}
+.siteNav2{
+  .siteNavBdR{
+    li.map{
+      .content{
+        width: 1098px;
+        dl{
+          width:(1094px / 11) * 3;
+          &.new {
+            width:(1096px / 11) * 2;
+          }
+        }
+      }
+    }
+  }
+
+}
+
