@@ -55,8 +55,8 @@ Seller项目：
 
 	Seller_product控制器：
 
-*  供货商-商品管理-上传产品 http://buyer.loc.33m.com/Seller_product/store_management_upload.html
-*  供货商-发布产品-分类 http://buyer.loc.33m.com/Seller_product/product_pubulish_selectcategory.html
+*  供货商-商品管理-上传产品 http://seller.loc.33m.com/Seller_product/store_management_upload.html
+*  供货商-发布产品-分类 http://seller.loc.33m.com/Seller_product/product_pubulish_selectcategory.html
 
 ## 声明
 
