@@ -1,37 +1,63 @@
-﻿## 简介
+﻿## 雅共生态简介
 
-ThinkPHP 是一个免费开源的，快速、简单的面向对象的 轻量级PHP开发框架 ，创立于2006年初，遵循Apache2开源协议发布，是为了敏捷WEB应用开发和简化企业应用开发而诞生的。ThinkPHP从诞生以来一直秉承简洁实用的设计原则，在保持出色的性能和至简的代码的同时，也注重易用性。并且拥有众多的原创功能和特性，在社区团队的积极参与下，在易用性、扩展性和性能方面不断优化和改进，已经成长为国内最领先和最具影响力的WEB应用开发框架，众多的典型案例确保可以稳定用于商业以及门户级的开发。
+雅共生态-原名M商城，是基于3m商业模式的利润共享的购物平台，包含服装内衣、鞋包配饰、户外运动、手机数码、家电办公、日用百货、家纺居家、文化娱乐、护肤彩妆、母婴用品、食品保健、特产零食等优质精良商品和优质服务，现在雅共生态注册即可享受免费赠品,雅共生态为你专属定做“超值购物，轻松创业”绝佳平台！
 
-## 全面的WEB开发特性支持
+## 前端WEB项目介绍
 
-最新的ThinkPHP为WEB应用开发提供了强有力的支持，这些支持包括：
+Buyer项目：
+	
+   Buyer控制器：
 
-*  MVC支持-基于多层模型（M）、视图（V）、控制器（C）的设计模式
-*  ORM支持-提供了全功能和高性能的ORM支持，支持大部分数据库
-*  模板引擎支持-内置了高性能的基于标签库和XML标签的编译型模板引擎
-*  RESTFul支持-通过REST控制器扩展提供了RESTFul支持，为你打造全新的URL设计和访问体验
-*  云平台支持-提供了对新浪SAE平台和百度BAE平台的强力支持，具备“横跨性”和“平滑性”，支持本地化开发和调试以及部署切换，让你轻松过渡，打造全新的开发体验。
-*  CLI支持-支持基于命令行的应用开发
-*  RPC支持-提供包括PHPRpc、HProse、jsonRPC和Yar在内远程调用解决方案
-*  MongoDb支持-提供NoSQL的支持
-*  缓存支持-提供了包括文件、数据库、Memcache、Xcache、Redis等多种类型的缓存支持
+*  消费商中心  http://buyer.loc.33m.com/Buyer/index.html
 
-## 大道至简的开发理念
+   Buyer_account控制器：
 
-ThinkPHP从诞生以来一直秉承大道至简的开发理念，无论从底层实现还是应用开发，我们都倡导用最少的代码完成相同的功能，正是由于对简单的执着和代码的修炼，让我们长期保持出色的性能和极速的开发体验。在主流PHP开发框架的评测数据中表现卓越，简单和快速开发是我们不变的宗旨。
+*  消费商-账户管理-个人信息	http://buyer.loc.33m.com/buyer_account/information.html
+*  消费商-账户管理-账户安全	http://buyer.loc.33m.com/buyer_account/member_account.html
+*  消费商-账户管理-收货地址 http://buyer.loc.33m.com/buyer_account/member_myorder_address.html
+*  消费商-账户管理-站内信 http://buyer.loc.33m.com/buyer_account/member_message.html
 
-## 安全性
+   Buyer_deal控制器：
 
-框架在系统层面提供了众多的安全特性，确保你的网站和产品安全无忧。这些特性包括：
+*  消费商-订单管理-全部订单 http://buyer.loc.33m.com/buyer_deal/member_mine_order.html
+*  消费商-订单管理-订单详情-1、提交订单 http://buyer.loc.33m.com/buyer_deal/order_place.html
+*  消费商-订单管理-订单详情-2、已付款 http://buyer.loc.33m.com/buyer_deal/order_payment.html
+*  消费商-订单管理-订单详情-3、已发货 http://buyer.loc.33m.com/buyer_deal/order_deliver_goods.html
+*  消费商-订单管理-订单详情-4、确认收货 http://buyer.loc.33m.com/buyer_deal/order_goods_receipt.html
+*  消费商-订单管理-订单详情-5、已收货未评价 http://buyer.loc.33m.com/buyer_deal/order_evaluate.html
+*  消费商-订单管理-订单详情-6、订单完成 http://buyer.loc.33m.com/buyer_deal/order_complete.html
+*  消费商-订单管理-订单详情-拆分订单 http://buyer.loc.33m.com/buyer_deal/order_split.html
 
-*  XSS安全防护
-*  表单自动验证
-*  强制数据类型转换
-*  输入数据过滤
-*  表单令牌验证
-*  防SQL注入
-*  图像上传检测
+   Buyer_dealafter控制器：
 
-## 商业友好的开源协议
+*  消费商-售后a—退款or退货 http://buyer.loc.33m.com/buyer_dealafter/buyer_request_refund.html
+*  消费商-售后b—退货提交申请 http://buyer.loc.33m.com/buyer_dealafter/buyer_commit_apply.html
+*  消费商-售后c—退款提交申请 http://buyer.loc.33m.com/buyer_dealafter/wait_business_refund_2.html
+*  消费商-售后d—待卖家同意 http://buyer.loc.33m.com/buyer_dealafter/wait_business_sub.html
+*  消费商-售后e—待收货 http://buyer.loc.33m.com/buyer_dealafter/wait_business_confirm_receipt.html
+*  消费商-售后f—已收货待退款 http://buyer.loc.33m.com/buyer_dealafter/wait_business_refund.html
+*  消费商-售后g—商家已退款 http://buyer.loc.33m.com/buyer_dealafter/business_refunded.html
 
-ThinkPHP遵循Apache2开源协议发布。Apache Licence是著名的非盈利开源组织Apache采用的协议。该协议和BSD类似，鼓励代码共享和尊重原作者的著作权，同样允许代码修改，再作为开源或商业软件发布。
+   Buyer_dealpost控制器：
+
+*  消费商-物流信息-1、等待揽件 http://buyer.loc.33m.com/Buyer_dealpost/logistics_wait.html
+*  消费商-物流信息-2、运输中 http://buyer.loc.33m.com/Buyer_dealpost/logistics_transport.html
+*  消费商-物流信息-3、派件中 http://buyer.loc.33m.com/Buyer_dealpost/logistics_delivery.html
+*  消费商-物流信息-4、签收 http://buyer.loc.33m.com/Buyer_dealpost/logistics_sign.html
+
+   Buyer_evaluation控制器：
+
+*  消费商-评价管理 http://buyer.loc.33m.com/Buyer_evaluation/evaluatio_management.html
+*  消费商-评价-评价 http://buyer.loc.33m.com/Buyer_evaluation/product_review.html
+*  消费商-评价-追评 http://buyer.loc.33m.com/Buyer_evaluation/product_review_additional.html
+
+Seller项目：
+
+	Seller_product控制器：
+
+*  供货商-商品管理-上传产品 http://buyer.loc.33m.com/Seller_product/store_management_upload.html
+*  供货商-发布产品-分类 http://buyer.loc.33m.com/Seller_product/product_pubulish_selectcategory.html
+
+## 声明
+
+© 2015-2017 33m.com 雅共生态版权所有。
