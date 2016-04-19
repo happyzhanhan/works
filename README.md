@@ -66,6 +66,13 @@
 *  消费商-找相似 http://buyer.loc.33m.com/Buyer_collection/member_find_similar.html
 *  消费商-我的足迹 http://buyer.loc.33m.com/Buyer_collection/member_my_track.html
 
+ #### Buyer_money控制器：
+
+*  消费商-账户余额 http://buyer.loc.33m.com/Buyer_money/consumer_balance.html
+*  消费商-抵用券 http://buyer.loc.33m.com/Buyer_money/consumer_voucher.html
+*  消费商-账户充值1 http://buyer.loc.33m.com/Buyer_money/account_recharge.html
+*  消费商-账户充值2 http://buyer.loc.33m.com/Buyer_money/account_recharge_b.html
+*  消费商-提现 http://buyer.loc.33m.com/Buyer_money/account_withdrawals.html
 
 ### Seller项目：
 
