@@ -53,6 +53,14 @@
 *  消费商-评价-评价 http://buyer.loc.33m.com/Buyer_evaluation/product_review.html
 *  消费商-评价-追评 http://buyer.loc.33m.com/Buyer_evaluation/product_review_additional.html
 
+  #### Buyer_shippingcart控制器：
+
+*  消费商-购物车 http://buyer.loc.33m.com/Buyer_shoppingcart/shopping_cart.html
+*  消费商-确认订单 http://buyer.loc.33m.com/Buyer_shoppingcart/confirm_order_info.html
+*  消费商-支付 http://buyer.loc.33m.com/Buyer_shoppingcart/payment_order.html
+
+
+
 ### Seller项目：
 
 卖家商品管理、订单管理
